@@ -11,7 +11,7 @@ body, ul, li, ol, p, dl, dd, h1, h2, h3, h4, h5, h6, img, iframe, form, div {
     list-style-type: none;
     border: 0;
 }
-/*鍦板潃*/
+/*购物车地址*/
 .address{	
 	width: 75%;
 	margin:0 auto ;	
@@ -20,7 +20,7 @@ body, ul, li, ol, p, dl, dd, h1, h2, h3, h4, h5, h6, img, iframe, form, div {
 	overflow: hidden;
 	font-size: 14px;
 }
-/*鍦板潃鏍囬*/
+/*地址头部*/
 h3.title {
     font-size: 16px;
     color: #000;
@@ -29,7 +29,7 @@ h3.title {
     padding-bottom: 10px;
     font-weight: bold;
 }
-/*鍦板潃淇℃伅*/
+/*地址信息表单*/
 .address .addr_list {	
 	width: 30%;
     height: auto;
@@ -78,7 +78,7 @@ h3.title {
 .address_edit a:hover,.address_add button:hover{
 	color: red;
 }
-/*娣诲姞鍦板潃*/
+/*地址添加*/
 .address_add{
 	width: 100%;
 	margin:0 auto ;	
@@ -95,7 +95,7 @@ h3.title {
 }
 
 
-/* 缁撶畻鍐呭*/
+/*结算订单信息*/
 .w960{
 	width: 75%;
 	margin: auto;
@@ -140,7 +140,7 @@ h3.title {
 	list-style-type: none;
 }
 
-/*缁撶畻鎬荤粨*/
+/*结算*/
 .shopping_sett{
 	width: 100%;
 	height: auto;
@@ -187,7 +187,7 @@ h3.title {
 }
 
 
-/*鏀粯鎴愬姛*/
+/*结算成功*/
 .comple_order{
 	width: 75%;
 	height: 260px;

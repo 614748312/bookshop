@@ -37,7 +37,7 @@ body, ul, li, ol, p, dl, dd, h1, h2, h3, h4, h5, h6, img, iframe, form, div {
 	background: transparent;
 }
 
-/* 购物车内容*/
+/* 购物车信息*/
 .w960{
 	font: 14px 'Hiragino Sans GB', "simsun", "Arial";	
 	width: 75%;
@@ -178,7 +178,7 @@ a.checknow{
     background-color: #fff;
     font-weight: bold;
 }
-/*结算*/
+/*total*/
 .shopping_total {
     width: 100%;
     height: 72px;
