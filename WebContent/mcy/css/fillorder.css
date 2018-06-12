@@ -1,0 +1,221 @@
+html body{
+    padding:0px;
+    
+}
+div{
+    display: block;
+}
+body, ul, li, ol, p, dl, dd, h1, h2, h3, h4, h5, h6, img, iframe, form, div {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border: 0;
+}
+/*鍦板潃*/
+.address{	
+	width: 75%;
+	margin:0 auto ;	
+	padding: 0 0 40px;
+	height: auto;
+	overflow: hidden;
+	font-size: 14px;
+}
+/*鍦板潃鏍囬*/
+h3.title {
+    font-size: 16px;
+    color: #000;
+    line-height: 22px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+/*鍦板潃淇℃伅*/
+.address .addr_list {	
+	width: 30%;
+    height: auto;
+	overflow: hidden;
+    float: left;
+    margin-right: 3%;
+    margin-bottom: 20px;
+    border: 1px solid #e6e6e6;
+}
+.addr_list .addr.active {
+    border-color: #ff2832;
+}
+.addr_list .addr p {
+    line-height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-left: 16px;
+}
+.addr_list .addr h4 {
+    font-weight: bold;
+    line-height: 30px;
+    border-bottom: 1px solid #e6e6e6;
+    padding-left: 20px;
+    margin-bottom: 4px;
+}
+.addr_list .addr h4 span {
+    float: right;
+    padding-right: 20px;
+   
+}
+.address_edit{
+    line-height: 30px;
+
+}
+.address_edit_left{
+	float: left;
+	padding-left: 18px;
+	padding-top: 10px;
+}
+.address_edit_regit{
+	float:right;
+	padding-right: 18px;
+	padding-top: 10px;
+}
+.address_edit a:hover,.address_add button:hover{
+	color: red;
+}
+/*娣诲姞鍦板潃*/
+.address_add{
+	width: 100%;
+	margin:0 auto ;	
+	float: left;
+	padding-top: 20px;
+	padding-left: 10px;	
+	margin-bottom: 10px;		
+}
+.address_add button{
+	width: 200px;
+	height: 36px;
+	font-size: 15px;
+
+}
+
+
+/* 缁撶畻鍐呭*/
+.w960{
+	width: 75%;
+	margin: auto;
+	height: auto;
+	overflow: hidden;
+}
+.shopping_title{
+	line-height: 36px;
+	height: 36px;
+	font-size:15px;
+	margin-top: 10px;
+}
+.shopping_title li{
+	float: left;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.f1{
+	text-align: center;
+	width: 20%;
+}
+.f2{
+	text-align: center;
+	width: 20%;
+}
+.f3,.f4{
+	text-align: center;
+	width: 20%;
+}
+.shopping_r{
+	line-height: 30px;
+	height: 80px;
+	margin-top: 10px;
+	text-align: center;
+	border-bottom: 1px solid #AEAEAE;
+}
+.shopping_r li{
+	float: left;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+/*缁撶畻鎬荤粨*/
+.shopping_sett{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	margin-top: 30px;
+}
+.shopping_sett_left{
+	float: left;
+	margin-left: 50px;
+}
+.shopping_sett_left p{
+	margin-left: 58px;
+	color: #FF4400;
+}
+.shopping_sett_right{
+    font-size: 16px;	
+	float: right;
+}
+.shopping_sett_right_f1{
+	float: right;
+    width: 200px;
+	height: 36px;
+	margin-bottom: 10px;
+	border-bottom:1px solid #AEAEAE ;
+}
+.sett_right_f2{
+	float: right;
+	color: red;
+}
+.sett{
+	width: 100%;
+	float: right;
+}
+.sett_buttom button,.settup_buttom button{
+	width: 200px;
+	height: 40px;
+	float: right;
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-bottom: 20px;
+	color: beige;
+	background-color: tomato;
+	font-size: 16px;	
+}
+
+
+/*鏀粯鎴愬姛*/
+.comple_order{
+	width: 75%;
+	height: 260px;
+	margin: auto;
+	margin-bottom: 30px;
+
+}
+.comple_tupian{
+	float:left;
+	width: 400px;
+    height: 250px;
+	margin-top:40px ;
+	margin-bottom:20px ;
+    text-align: center;
+}
+.comple_tishi{
+	float: right;
+    width: 400px;
+    margin-right: 80px;
+	margin-top:100px ;
+	margin-bottom:20px ;
+	text-align: center;
+}
+.comple_tishi span{
+    line-height: 40px;
+	font-size: 20px;
+  	
+}
+.comple_tishi a:hover{
+	color: red;
+}

@@ -1,0 +1,227 @@
+html body{
+    padding:0px;
+    
+}
+div{
+    display: block;
+}
+body, ul, li, ol, p, dl, dd, h1, h2, h3, h4, h5, h6, img, iframe, form, div {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border: 0;
+}
+/* 购物流程*/
+.logo_line{
+	width: 100%;
+	border-bottom: 4px solid red;
+	height: 100px;
+}
+.shopping_prcedure{
+	float: right;
+    width: 64%;
+	height: 40px;
+	background: url(../img/procedure_bg.png) 0 0 no-repeat;
+	font: bold 18px/36px "microsoft yahei";
+	color: #646464;
+	margin: 40px 0 0;
+}
+.shopping_prcedure span.current{
+	color: #FFFFFFf;
+	width: 200px;
+}
+.shopping_prcedure span{
+	width: 200px;
+	display: inline-block;
+	text-align: center;
+	background: transparent;
+}
+
+/* 购物车内容*/
+.w960{
+	font: 14px 'Hiragino Sans GB', "simsun", "Arial";	
+	width: 75%;
+	margin:0 auto ;	
+}
+.row5 a:hover{
+    color:#ff2832;
+    text-decoration:underline;
+}
+.shopping_title{
+	line-height: 36px;
+	height: 36px;
+	margin-top: 30px;
+}
+.shopping_title li{
+	float: left;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.f1{
+	text-align: left;
+	width: 17%;
+}
+.f2{
+	text-align: left;
+	width: 36%;
+}
+.f3{
+	text-align: left;
+	width: 15%;
+}
+.f4{
+	text-align: left;
+	width: 11%;
+}
+.f5{
+	text-align: left;
+	width: 8%;
+}
+a.checknow{
+	display: inline-block;
+	width: 12px;
+	height:12px ;
+	border: 1px solid #CBCBCB;
+	background-color: #FAFAFA;
+	text-decoration: none;
+	border-radius: 2px;
+	font-size: 0;
+    font-size: 0;
+    line-height: 0;
+	overflow: hidden;
+	margin: 0 8px 0 0;
+	vertical-align: text-bottom;
+}
+.fn-shops{
+	color: #9C9C9C;
+}
+.shopping_list{
+	width: 100%;
+	margin-top: 10px;
+	font: 13px 'Hiragino Sans GB', "simsun", "Arial";	
+	border:1px solid #EBEBEB ;
+
+}
+.shopping_list td{
+	vertical-align: top;
+	padding-top: 30px;
+	position: relative;
+	line-height: 40px;
+	text-align: center;
+	/*border-top: 1px solid #8C8C8C;*/
+}
+
+.row1{
+	padding-right:10px ;
+	width: 5%;
+	vertical-align: middle;
+}
+.shopping_list .row_img {
+    padding: 20px 20px 20px 0;
+    width: 10%;
+    position: relative;
+    z-index: 9;
+    font-size: 0;
+    line-height: 0;
+}
+.shopping_list .row_name {
+    width: 30%;
+    line-height: 30px;
+    text-align: left;
+    position: relative;
+    padding-top: 30px;
+}
+.row3{
+	text-align: left;
+	width: 11%;
+}
+.row4{
+	text-align: left;
+	width: 10%;
+}
+.row5{
+	text-align: left;
+	width: 12%;
+}
+.row_name a:hover{
+	color: red;
+}
+.shopping_list .amount {
+    border: 1px solid #dcdcdc;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    margin: 5px auto;
+    overflow: hidden;
+}
+.shopping_list td span {
+    display: block;
+    width: 98px;
+}
+.shopping_list .amount a {
+    display: block;
+    float: left;
+    height: 28px;
+    width: 31px;
+    background-color: #f4f4f4;
+}
+
+.shopping_list .amount input {
+    width: 34px;
+    height: 28px;
+    float: left;
+    padding: 0;
+    text-align: center;
+    border: 1px solid #dcdcdc;
+    border-width: 0 1px;
+    background-color: #fff;
+    font-weight: bold;
+}
+/*结算*/
+.shopping_total {
+    width: 100%;
+    height: 72px;
+    z-index: 10;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    position: relative;
+}
+.shopping_total .shopping_total_right {
+    float: right;
+    margin: 18px 0 0;
+    width: 530px;
+    position: relative;
+}
+.shopping_total .unable, .shopping_total .unable:hover {
+    cursor: default;
+    background-color: red;
+}
+
+.shopping_total .total_btn {
+    float: right;
+    display: block;
+    width: 116px;
+    height: 28px;
+    font: bold 18px/28px "Microsoft Yahei";
+    color: #fff;
+    background-color: #FF4400;
+    border-radius: 2px;
+    text-align: center;
+    margin-top: 4px;
+ }
+.shopping_total .shopping_total_left {
+    float: left;
+    line-height: 58px;
+    width: 430px;
+    position: relative;
+}
+.shopping_total .shopping_total_left a.checknow {
+    margin: 0 6px 0 0;
+}
+.shopping_total .shopping_total_left a {
+    margin-left: 28px;
+}
+.shopping_total .shopping_total_left span {
+    margin-left: 80px;
+} 

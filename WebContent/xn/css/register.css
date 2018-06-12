@@ -1,0 +1,142 @@
+*{
+	margin: 0;
+	padding: 0;
+	
+	font-family: "微软雅黑";
+}
+body{
+	background-color:#f6f9fb;
+}
+
+.header{
+	width: 960px;
+	height: 70px;
+	margin-top: 3px;
+	background-color: white;
+	margin: 10px auto;
+    border:2px solid red;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+	
+}
+.form2{
+    width: 960px;
+	height: 720px;
+	margin: 0px auto;
+	background-color: white;
+	box-shadow:-10px 10px 5px #ebeeef;
+}
+div{
+	padding-bottom: 30px;
+}
+.form2 span{
+	display: block;
+	float: left;
+	height: 50px;	
+	line-height: 50px;
+	color: grey;
+}
+.form2 span.tip{
+	width: 100px;
+	text-align: right;
+	margin-left: 200px;
+}
+.form2 span.one{
+	position: absolute;
+	margin-left: 620px;
+	margin-top: -50px;
+	text-align: right;
+}
+.form2 input{
+	width: 295px;
+	height: 40px;
+	line-height: 18px;
+	border-radius:5px ;
+	padding: 5px;
+}
+.form2 input.sex1{
+	width:15px;
+	height: 15px;
+	margin-left: 20px;
+	margin-top: 20px;
+	
+}
+.regist{
+	
+	margin-top: 30px;
+	padding-left: 390px;
+}
+#regist_btn{
+	background-color:rgb(56, 95, 158);
+	width: 100px;
+	border-radius: 10px;
+}
+#regist_btn:hover{
+	color:red;
+
+}
+.regist_login{
+	width: 50px;
+	float: right;
+	margin-top: -10px;
+	margin-left: 800px;
+}
+.regist_login a:link,.regist_login a:visited{
+	font-size: 14px;
+
+	color: black;
+}
+.regist_login a:hover,.regist_login a:active{
+	font-size: 14px;
+	font-family: "微软雅黑";
+	text-decoration: none;
+	color: red;
+}
+.form_help img{
+	float: left;
+}
+.form_help{
+	padding-top: 10px;
+	padding-left: 30px;
+	padding-bottom: 50px;
+	padding-right: 2px;
+	
+
+}
+.form_help a{
+	margin-top: 0px;
+    margin-left: 15px;
+	float:left;
+}
+.form_help a:link,.form_help a:visited{
+	font-size: 15px;
+	color: black;
+}
+.form_help a:hover,.form_help a:active{
+	font-size: 15px;
+	font-family: "微软雅黑";
+	text-decoration: none;
+	color: red;
+}
+.regist_img{
+	width: 220px;
+	height: 55px;
+	float: left;
+}
+.regist_num {
+	width: 500px;
+	float: right;
+	 
+}
+.regist_num li{
+	font-size: 14px;
+	float: right;
+	list-style-type: none;
+  line-height: 30px;
+   text-align: center;
+   margin: 0px 10px;
+   background: url(../img/icon_05.png) no-repeat right center;
+   background-size: 1px 25px;
+
+}

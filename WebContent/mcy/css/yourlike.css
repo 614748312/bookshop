@@ -1,0 +1,56 @@
+/*猜你喜欢*/
+.yourlike_title {
+	width: 75%;
+	height: 30px;
+	margin: auto;
+	padding-top: 20px;
+}
+.yourlike_title h3{
+	float: left;			
+}
+.yourlike_title h4{
+	float:right;			
+}
+.yourlike_info{
+	width: 75%;
+	margin: auto;
+	height: auto;
+	overflow: hidden;
+	padding-bottom: 30px;
+	background-color: #F0F0F0;		
+}
+
+.yourlike_book{
+	float: left;
+	width: 15%;
+	height: 200px;
+	margin-left: 1.4%;
+	margin-top: 20px;
+	background-color:white;
+}
+.book_photo{
+	width: 120;
+	height: 120px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;		
+}
+.book_name{
+	line-height: 30px;
+	margin-left: 10px;
+	font-size:15px ;	
+}
+.book_name a{
+	color: #000000;
+}
+.book_name p ,.book_name a:hover,.yourlike_title a:hover{
+	color: red;
+}
+.book_photo img{
+	width: 120px;
+	height: 120px;
+}
+.book_photo img:hover{
+	width: 130px;
+	height: 130px;	
+}
