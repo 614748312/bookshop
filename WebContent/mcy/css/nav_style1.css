@@ -1,52 +1,59 @@
-html body{
-    padding:0px;
-    
+html body {
+	padding: 0px;
 }
-div{
-    display: block;
+
+div {
+	display: block;
 }
-body, ul, li, ol, p, dl, dd, h1, h2, h3, h4, h5, h6, img, iframe, form, div {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    border: 0;
+
+body, ul, li, ol, p, dl, dd, h1, h2, h3, h4, h5, h6, img, iframe, form,
+	div {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	border: 0;
 }
 
 /* 购物流程*/
-.logo1{
+.logo1 {
 	width: 35%;
 	padding-top: 24px;
 }
-.logo_line1{
+
+.logo_line1 {
 	width: 100%;
 	border-bottom: 4px solid red;
 	height: 100px;
 }
-.w960{
-	font: 14px 'Hiragino Sans GB', "simsun", "Arial";	
+
+.w960 {
+	font: 14px 'Hiragino Sans GB', "simsun", "Arial";
 	width: 75%;
-	margin:0 auto ;	
+	margin: 0 auto;
 }
-.row5 a:hover{
-    color:#ff2832;
-    text-decoration:underline;
+
+.row5 a:hover {
+	color: #ff2832;
+	text-decoration: underline;
 }
-.shopping_prcedure{
+
+.shopping_prcedure {
 	float: right;
-    width: 65%;
+	width: 65%;
 	height: 40px;
 	font: bold 18px/36px "microsoft yahei";
 	color: #646464;
 	margin: 40px 0 0;
 }
-.shopping_prcedure span.current{
+
+.shopping_prcedure span.current {
 	color: #FFFFFFf;
 	width: 200px;
 }
-.shopping_prcedure span{
+
+.shopping_prcedure span {
 	width: 200px;
 	display: inline-block;
 	text-align: center;
 	background: transparent;
 }
-

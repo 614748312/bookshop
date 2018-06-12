@@ -1,234 +1,273 @@
-
 /*当前位置*/
-.now_position{
-    height: 30px;
-    width: 100%;
+.now_position {
+	height: 30px;
+	width: 100%;
 }
-.now_position p{
-    margin-left: 18%;
-    font-size: larger;
-    color: #ff2832;
+
+.now_position p {
+	margin-left: 18%;
+	font-size: larger;
+	color: #ff2832;
 }
 /*左侧书籍图片信息*/
-.author_left{
-    height:700px;
-    width: 20%;
-    box-shadow:1px 1px  3px 3px rgba(34, 25, 25, 0.4);
-    margin-left:16%;
-    float: left;
-    margin-top: 20px;
+.author_left {
+	height: 700px;
+	width: 20%;
+	box-shadow: 1px 1px 3px 3px rgba(34, 25, 25, 0.4);
+	margin-left: 16%;
+	float: left;
+	margin-top: 20px;
 }
-.author_img_big{
-    height: 50%;
-    width:250px;
-    margin-left: 70px;
-    margin-top: 50px;
+
+.author_img_big {
+	height: 50%;
+	width: 250px;
+	margin-left: 70px;
+	margin-top: 50px;
 }
-.author_small{
-    height: 40%;
-    width: 350px;
-    margin-left: 15px;
+
+.author_small {
+	height: 40%;
+	width: 350px;
+	margin-left: 15px;
 }
-.author_small ul{
-    list-style: none;
+
+.author_small ul {
+	list-style: none;
 }
-.author_small ul li{
-    height:150px;
-    width:100px;
-    float: left;
-    margin-left: 10px;
-    margin-top:40px;
+
+.author_small ul li {
+	height: 150px;
+	width: 100px;
+	float: left;
+	margin-left: 10px;
+	margin-top: 40px;
 }
 /*右侧书籍详情*/
-.author_right{
-    height:700px;
-    width: 48%;
-    box-shadow: 1px 1px  3px 3px rgba(34, 25, 25, 0.4);
-    margin-right:15%;
-    float: right;
-    margin-top: 20px;
+.author_right {
+	height: 700px;
+	width: 48%;
+	box-shadow: 1px 1px 3px 3px rgba(34, 25, 25, 0.4);
+	margin-right: 15%;
+	float: right;
+	margin-top: 20px;
 }
-.author_name{
-    height: 80px;
-    width: 100%;
-    text-align: center;
-    border-bottom: 1px solid #ccc;
 
+.author_name {
+	height: 80px;
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
 }
-.author_name h2{
-    color: indianred;
-    line-height: 80px;
+
+.author_name h2 {
+	color: indianred;
+	line-height: 80px;
 }
-.author_introduce{
-    height: 180px;
-    width: 100%;
-    border-bottom: 2px solid #ccc;
+
+.author_introduce {
+	height: 180px;
+	width: 100%;
+	border-bottom: 2px solid #ccc;
 }
-.author_introduce p{
-    font: 20px/30px "Microsoft Yahei";
-    color: #2e6da4;
+
+.author_introduce p {
+	font: 20px/30px "Microsoft Yahei";
+	color: #2e6da4;
 }
-.author_books_money{
-    height: 210px;
-    width: 100%;
-    border-bottom: 2px solid #ccc;
+
+.author_books_money {
+	height: 210px;
+	width: 100%;
+	border-bottom: 2px solid #ccc;
 }
-.author_books_money h1{
-    font: 30px/30px "Microsoft Yahei";
-    color: red;
-    margin-left: 50px;
-    line-height: 50px;
-    margin-bottom: 10px;
+
+.author_books_money h1 {
+	font: 30px/30px "Microsoft Yahei";
+	color: red;
+	margin-left: 50px;
+	line-height: 50px;
+	margin-bottom: 10px;
 }
-.author_books_money span{
-    font: 30px/30px "Microsoft Yahei";
-    color: red;
-    margin-left: 50px;
-    line-height: 50px;
+
+.author_books_money span {
+	font: 30px/30px "Microsoft Yahei";
+	color: red;
+	margin-left: 50px;
+	line-height: 50px;
 }
-.author_books_money .btn{
-    text-decoration:none;
-    background: #385f9e;
-    color:#f2f2f2;
-    padding: 10px 30px 10px 30px;
-    font-size:16px;
-    font-family: 微软雅黑,宋体,Arial,Helvetica,Verdana,sans-serif;
-    font-weight:bold;
-    border-radius:3px;
-    -webkit-transition:all linear 0.30s;
-    -moz-transition:all linear 0.30s;
-    transition:all linear 0.30s;
-    margin-top: 10px;
+
+.author_books_money .btn {
+	text-decoration: none;
+	background: #385f9e;
+	color: #f2f2f2;
+	padding: 10px 30px 10px 30px;
+	font-size: 16px;
+	font-family: 微软雅黑, 宋体, Arial, Helvetica, Verdana, sans-serif;
+	font-weight: bold;
+	border-radius: 3px;
+	-webkit-transition: all linear 0.30s;
+	-moz-transition: all linear 0.30s;
+	transition: all linear 0.30s;
+	margin-top: 10px;
 }
-.author_books_money .btn:hover{
-    background: #ff2832;
+
+.author_books_money .btn:hover {
+	background: #ff2832;
 }
-.author_books_money .btn-a{
-    margin-left: 50px;
-    margin-top: 25px;
+
+.author_books_money .btn-a {
+	margin-left: 50px;
+	margin-top: 25px;
 }
-.btn-a{
-	margin-top:50px;
+
+.btn-a {
+	margin-top: 50px;
 }
- .num{
-    height: 40px;
-    width: 80px;
-    border: red 2px solid;
-    margin-left: 10px;
-    font-size:30px;
-    margin-top:15px;
+
+.num {
+	height: 40px;
+	width: 80px;
+	border: red 2px solid;
+	margin-left: 10px;
+	font-size: 30px;
+	margin-top: 15px;
 }
-.num_add{
-    width: 100px;
-    position: relative;
-    top: -8px;
-    padding-top: 3px;
-    margin-left: 20px;
+
+.num_add {
+	width: 100px;
+	position: relative;
+	top: -8px;
+	padding-top: 3px;
+	margin-left: 20px;
 }
-.num_del{
-    width: 100px;
-    padding-top: 3px;
-    position: relative;
-    top: -8px;
+
+.num_del {
+	width: 100px;
+	padding-top: 3px;
+	position: relative;
+	top: -8px;
 }
-.num_cart{
-    margin-left: 80px;
-    margin-top: 30px;
+
+.num_cart {
+	margin-left: 80px;
+	margin-top: 30px;
 }
-.num_buy{
-    margin-left: 40px;
-    margin-top: 30px;
+
+.num_buy {
+	margin-left: 40px;
+	margin-top: 30px;
 }
-.author_books_img ul{
-    list-style: none;
+
+.author_books_img ul {
+	list-style: none;
 }
-.author_books_img ul li{
-    float: left;
-    height: 200px;
-    width: 150px;
-    margin-left: 60px;
+
+.author_books_img ul li {
+	float: left;
+	height: 200px;
+	width: 150px;
+	margin-left: 60px;
 }
-.author_books_img ul li a{
-    margin-left: 40px;
+
+.author_books_img ul li a {
+	margin-left: 40px;
 }
-.author_books_img ul li p{
-    margin-left: 40px;
-    color: red;
-    font: 15px/30px "Microsoft Yahei";
+
+.author_books_img ul li p {
+	margin-left: 40px;
+	color: red;
+	font: 15px/30px "Microsoft Yahei";
 }
-.author_books_like{
-    height: 220px;
-    width: 100%;
-    font: 16px/30px "Microsoft Yahei";
+
+.author_books_like {
+	height: 220px;
+	width: 100%;
+	font: 16px/30px "Microsoft Yahei";
 }
-.author_books_like span{
-    margin-left: 50px;
-    line-height: 60px;
-    color: #2e6da4;
+
+.author_books_like span {
+	margin-left: 50px;
+	line-height: 60px;
+	color: #2e6da4;
 }
-.author_books_like  a{
-    color: blue;
-    margin-left: 50px;
+
+.author_books_like  a {
+	color: blue;
+	margin-left: 50px;
 }
-.author_books_like .author_like_other  a:hover{
-    color: red;
+
+.author_books_like .author_like_other  a:hover {
+	color: red;
 }
-.author_books_like .author_book_other  a:hover{
-    color: red;
+
+.author_books_like .author_book_other  a:hover {
+	color: red;
 }
-.author_books_like .author_introduce_other  a:hover{
-    color: red;
+
+.author_books_like .author_introduce_other  a:hover {
+	color: red;
 }
-.author_like_other{
-    height: 70px;
-    width: 100%;
-    border-bottom: #2e6da4 1px solid;
+
+.author_like_other {
+	height: 70px;
+	width: 100%;
+	border-bottom: #2e6da4 1px solid;
 }
+
 .author_book_other {
-    height: 70px;
-    width: 100%;
-    border-bottom: #2e6da4 1px solid;
+	height: 70px;
+	width: 100%;
+	border-bottom: #2e6da4 1px solid;
 }
-.author_introduce_other{
-    height: 70px;
-    width: 100%;
+
+.author_introduce_other {
+	height: 70px;
+	width: 100%;
 }
 /*底部书籍推荐*/
-.author_buttom{
-    height: 390px;
-    width: 80%;
-    margin-left: 12%;
-    box-shadow: 2px 1px 3px 3px rgba(34, 25, 25, 0.8);
-    margin-top: 40%;
+.author_buttom {
+	height: 390px;
+	width: 80%;
+	margin-left: 12%;
+	box-shadow: 2px 1px 3px 3px rgba(34, 25, 25, 0.8);
+	margin-top: 40%;
 }
-.other_icon{
-    height: 100px;
-    width: 100%;
+
+.other_icon {
+	height: 100px;
+	width: 100%;
 }
-.other_img{
-    height: 280px;
-    width: 80%;
-    margin-left: 10%;
+
+.other_img {
+	height: 280px;
+	width: 80%;
+	margin-left: 10%;
 }
-.other_img ul li span{
-    margin-left: 40px;
-    color: red;
-    font: 16px/30px "Microsoft Yahei";
+
+.other_img ul li span {
+	margin-left: 40px;
+	color: red;
+	font: 16px/30px "Microsoft Yahei";
 }
-.author_buttom ul{
-    list-style: none;
+
+.author_buttom ul {
+	list-style: none;
 }
-.author_buttom ul li{
-    height: 200px;
-    width: 150px;
-    float: left;
-    margin-left: 80px;
+
+.author_buttom ul li {
+	height: 200px;
+	width: 150px;
+	float: left;
+	margin-left: 80px;
 }
-.author_buttom a{
-    color: blue;
-    font-size: 20px;
-    margin-left: 35px;
+
+.author_buttom a {
+	color: blue;
+	font-size: 20px;
+	margin-left: 35px;
 }
-.author_buttom a:hover{
-    color: red;
+
+.author_buttom a:hover {
+	color: red;
 }

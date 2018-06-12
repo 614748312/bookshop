@@ -1,38 +1,44 @@
-html body{
-    padding:0px;
-    margin: 0px;
+html body {
+	padding: 0px;
+	margin: 0px;
 }
-div{
-    display: block;
+
+div {
+	display: block;
 }
-body, ul, li, ol, p, dl, dd, h1, h2, h3, h4, h5, h6, img, iframe, form, div {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    border: 0;
+
+body, ul, li, ol, p, dl, dd, h1, h2, h3, h4, h5, h6, img, iframe, form,
+	div {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	border: 0;
 }
 /*左边*/
-.mymuen{
+.mymuen {
 	width: 75%;
 	height: auto;
 	overflow: hidden;
 	margin: auto;
 }
-.mymuen_list{
-	float:left;
+
+.mymuen_list {
+	float: left;
 	width: 24%;
 	height: auto;
 	overflow: hidden;
-	margin-top:40px ;
-	margin-bottom:20px ;
+	margin-top: 40px;
+	margin-bottom: 20px;
 }
-.mymuen_title{
+
+.mymuen_title {
 	width: 100%;
 	height: 50px;
 	background-color: #D9D9D9;
 	text-align: center;
 }
-.mymuen_list_n{
+
+.mymuen_list_n {
 	width: 100%;
 	height: auto;
 	overflow: hidden;
@@ -40,134 +46,156 @@ body, ul, li, ol, p, dl, dd, h1, h2, h3, h4, h5, h6, img, iframe, form, div {
 	text-align: center;
 	padding-bottom: 30px;
 }
+
 .mymuen_list_n1 {
 	color: red;
 }
-.mymuen_title span{
+
+.mymuen_title span {
 	line-height: 50px;
 	font-size: 18px;
 }
-.mymuen_list_n li{
+
+.mymuen_list_n li {
 	line-height: 50px;
 	color: #000000;
 }
-.mymuen_list_n li:hover{
+
+.mymuen_list_n li:hover {
 	background-color: #D9D9D9;
 }
-.mymuen_list_n a:hover{
+
+.mymuen_list_n a:hover {
 	color: red;
 }
 
 /*右边*/
-.myoder{
+.myoder {
 	width: 73%;
 	height: auto;
 	overflow: hidden;
 	float: right;
-	margin-top:20px ;
+	margin-top: 20px;
 }
 /*右边我的位置*/
-.myoder_de{
+.myoder_de {
 	width: 100%;
 	height: 20px;
 	font-size: 13px;
 	margin-bottom: 20px;
 }
 /*右边是否发货*/
-.myoder_title{
+.myoder_title {
 	width: 100%;
 	height: 30px;
-	font-size: 15px;	
+	font-size: 15px;
 }
+
 .myoder_title li {
 	float: left;
-    margin-right: 20px ;
-    display:inline;
+	margin-right: 20px;
+	display: inline;
 }
-.myoder_title a:hover ,.myoder_de a:hover{
+
+.myoder_title a:hover, .myoder_de a:hover {
 	color: red;
 }
-.s1{
+
+.s1 {
 	color: red;
 }
 
 /*右边内容我的订单*/
-.myoder_form{
+.myoder_form {
 	width: 100%;
 	height: auto;
 	overflow: hidden;
 	background-color: #F9F9F9;
 	margin-bottom: 5px;
 }
-.myoder_time{
+
+.myoder_time {
 	margin-top: 10px;
 	font-size: 14px;
 }
-.myoder_form_c{
+
+.myoder_form_c {
 	width: 100%;
 	height: auto;
-	overflow: hidden;	
+	overflow: hidden;
 }
-.myoder_form_con{
+
+.myoder_form_con {
 	width: 100%;
-	height: 30px;	
-    margin-bottom: 20px;
+	height: 30px;
+	margin-bottom: 20px;
 }
-.myoder_form_con li{
-	display:inline;
+
+.myoder_form_con li {
+	display: inline;
 	float: left;
 	text-align: center;
-}	
-.shopping_r{
-	width: 100%;
-	height: 70px;	
 }
-.shopping_r li{
-	display:inline;
+
+.shopping_r {
+	width: 100%;
+	height: 70px;
+}
+
+.shopping_r li {
+	display: inline;
 	float: left;
 	text-align: center;
 	font-size: 14px;
 }
-.f1{
-   width: 10%;	
-}
-.f2{
-	width: 28%;
-}
-.f3{
-	width: 12%;
-}
-.f4{
+
+.f1 {
 	width: 10%;
 }
-.myoder_form_s{
+
+.f2 {
+	width: 28%;
+}
+
+.f3 {
+	width: 12%;
+}
+
+.f4 {
+	width: 10%;
+}
+
+.myoder_form_s {
 	float: right;
 	margin-right: 30px;
 	padding-bottom: 20px;
 }
 
 /*我的信息*/
-.myinfo{	
+.myinfo {
 	width: 100%;
 	height: auto;
-	overflow: hidden;	
+	overflow: hidden;
 }
-.myinfo table{
-   margin-left: 10%; 
-   margin-bottom: 20px;
+
+.myinfo table {
+	margin-left: 10%;
+	margin-bottom: 20px;
 }
-.myinfo td{
-   height: 50px;
-   padding-right: 30px;
-}	
-.myinfo button{
-    height: 36px;
-    width: 100px;
-    margin-top: 30px;
+
+.myinfo td {
+	height: 50px;
+	padding-right: 30px;
+}
+
+.myinfo button {
+	height: 36px;
+	width: 100px;
+	margin-top: 30px;
 }
 
 /*我的地址*/
-.myadress{
+.myadress {
 	width: 100%;
 	height: auto;
 	overflow: hidden;
@@ -175,87 +203,99 @@ body, ul, li, ol, p, dl, dd, h1, h2, h3, h4, h5, h6, img, iframe, form, div {
 	padding: 0 0 40px;
 }
 /*地址信息*/
-.addr_list {	
+.addr_list {
 	width: 30%;
-    height: auto;
+	height: auto;
 	overflow: hidden;
-    float: left;
-    margin-right: 3%;
-    margin-bottom: 20px;
-    border: 1px solid #e6e6e6;
+	float: left;
+	margin-right: 3%;
+	margin-bottom: 20px;
+	border: 1px solid #e6e6e6;
 }
+
 .addr_list .addr.active {
-    border-color: #ff2832;
+	border-color: #ff2832;
 }
+
 .addr_list .addr p {
-    line-height: 30px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    padding-left: 16px;
+	line-height: 30px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding-left: 16px;
 }
+
 .addr_list .addr h4 {
-    font-weight: bold;
-    line-height: 30px;
-    border-bottom: 1px solid #e6e6e6;
-    padding-left: 20px;
-    margin-bottom: 4px;
+	font-weight: bold;
+	line-height: 30px;
+	border-bottom: 1px solid #e6e6e6;
+	padding-left: 20px;
+	margin-bottom: 4px;
 }
+
 .addr_list .addr h4 span {
-    float: right;
-    padding-right: 20px;   
+	float: right;
+	padding-right: 20px;
 }
-.address_edit{
-    line-height: 30px;
+
+.address_edit {
+	line-height: 30px;
 }
-.address_edit_left{
+
+.address_edit_left {
 	float: left;
 	padding-left: 18px;
 	padding-top: 10px;
 }
-.address_edit_regit{
-	float:right;
+
+.address_edit_regit {
+	float: right;
 	padding-right: 18px;
 	padding-top: 10px;
 }
-.address_edit a:hover,.address_add button:hover{
+
+.address_edit a:hover, .address_add button:hover {
 	color: red;
 }
-.address_add{
+
+.address_add {
 	width: 100%;
-	margin:0 auto ;	
+	margin: 0 auto;
 	float: left;
 	padding-top: 20px;
-	padding-left: 10px;		
+	padding-left: 10px;
 }
-.address_add button{
+
+.address_add button {
 	width: 200px;
 	height: 36px;
 	font-size: 15px;
-
 }
 
 /*修改密码*/
-.mypassword {	
+.mypassword {
 	width: 100%;
 	height: auto;
-	overflow: hidden;	
+	overflow: hidden;
 }
-.mypassword table{
-   margin-left: 10%; 
-   margin-bottom: 20px;
-}
-.mypassword td{
-   line-height: 50px;
-   padding-right: 30px;
-}	
-.mypassword input{
-    height: 30px;
-    width: 250px;
-}
-.mypassword button{
-    height: 36px;
-    width: 255px;
-    margin-top: 30px;
-}	
 
+.mypassword table {
+	margin-left: 10%;
+	margin-bottom: 20px;
+}
+
+.mypassword td {
+	line-height: 50px;
+	padding-right: 30px;
+}
+
+.mypassword input {
+	height: 30px;
+	width: 250px;
+}
+
+.mypassword button {
+	height: 36px;
+	width: 255px;
+	margin-top: 30px;
+}

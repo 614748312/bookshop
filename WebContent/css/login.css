@@ -1,0 +1,122 @@
+body{
+	height: 100%;
+		width: 1200px;
+	margin: 0 auto;
+}
+*{
+	padding: 0;
+	margin:0;
+}
+.login_main{
+
+	background-color: wheat;
+}
+.login_head{
+	margin-bottom: 10px;
+	margin-top: 20px;
+	padding-left:20px ;
+	padding-top: 20px;
+	width: 1199px;
+	height: 80px;
+}
+.login_left img{
+	width: 790px;
+	margin-right: 10px;
+	height: 500px;
+	float: left;
+	background-color: red;
+}
+.login_right{
+	margin-top: 90px;
+	width: 300px;
+	float: right;
+	height: 332px;
+	border: 1px solid #eef2f4;
+	box-shadow: 0px 1px 2px #eee;
+}
+.login_right .login_password{
+	padding-left: 10px;
+	margin-left: 7px;
+	margin-right: 7px;
+	margin-bottom: 10px;
+	margin-top: 7px;
+	color: #3c3c3c;
+	font-family: "microsoft yahei";
+}
+.login_password{
+	font:bold 20px;
+}
+.login_main_in{
+	margin-left: 7px;
+	margin-right: 7px;
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+.login_row input{
+	width:230px ;
+	margin-left: 5px;
+	height: 35px;
+	border: 1px solid #eef2f4;
+	padding-left: 40px;
+	
+}
+.login_inp1{
+	background: url(../img/icon_01.png)no-repeat 15px center;
+}
+.login_row .login_inp2{
+	background: url(../img/icon_02.png)no-repeat 15px center;
+}
+.login_valid{
+	width:265px ;
+	margin-left: 5px;
+	height: 35px;
+	padding-left: 5px;	
+}
+.login_valid span.login_valid_nm{
+	color: #3c3c3c;
+	line-height: 35px;
+	
+}
+.login_tr{
+    margin-left: 110px;
+    padding-top: 10px;
+}
+.login_tr input.ltn{
+	border-radius: 5px;
+	width:90px;
+	height:30px;
+	margin-top: 20px;
+}
+.login_wj{
+	margin-top: 46px;
+	margin-left: 155px;
+}
+.login_wj a:link,.login_wj a:visited{
+	font-size: 14px;
+    text-decoration: none;
+	color: black;
+}
+.login_wj a:hover,.login_wj a:active{
+	font-size: 14px;
+	font-family: "Î¢ÈíÑÅºÚ";
+	text-decoration: none;
+	color: red;
+}
+.btn111{
+	border: 1px solid #eef2f4;
+	width: 80px;
+    height: 35px;
+    float: right;
+    margin-right:35px;
+}
+.login_valid input{
+	width: 60px;
+	height: 35px;
+	border: 1px solid #eef2f4;
+}
+.bbb1{
+	width: 230px;
+	height: 25px;
+	margin-left: 35px;
+	font-size:13px;
+}
