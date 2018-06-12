@@ -13,11 +13,11 @@ body{
 	height: 70px;
 	margin-top: 3px;
 	background-color: white;
-	margin: 0px auto;
-   border:2px solid red;
-   border-top-style: none;
-   border-left-style: none;
-   border-right-style: none;
+	margin: 10px auto;
+    border:2px solid red;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
 	
 }
 .form2{
@@ -25,7 +25,6 @@ body{
 	height: 720px;
 	margin: 0px auto;
 	background-color: white;
-	margin-top: 35px;
 	box-shadow:-10px 10px 5px #ebeeef;
 }
 div{
@@ -69,11 +68,14 @@ div{
 	padding-left: 390px;
 }
 #regist_btn{
-	background-color: red;
+	background-color:rgb(56, 95, 158);
 	width: 100px;
 	border-radius: 10px;
 }
+#regist_btn:hover{
+	color:red;
 
+}
 .regist_login{
 	width: 50px;
 	float: right;
