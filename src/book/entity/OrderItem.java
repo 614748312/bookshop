@@ -22,9 +22,15 @@ public class OrderItem {
 	@ManyToOne
 	@JoinColumn(name = "orderNumber")
 	private Orders orders;// 订单实体类
-	private Integer bookISBN;// 图书编号
-	private Integer publishHouseId;// 出版社id
-	private Integer authorId;// 图书作者
+	@ManyToOne
+	@JoinColumn(name = "bookISBN")
+	private Book book;// 图书编号
+	@ManyToOne
+	@JoinColumn(name = "publishHouseId")
+	private PublishHouse publishHouse;// 出版社id
+	@ManyToOne
+	@JoinColumn(name = "authorId")
+	private Author author;// 图书作者id
 	private Date deliveTime;// 发货时间
 	private boolean orderStatus;// 图书状态，默认为false（未发货），ture（已发货）
 	private Integer bookCount;// 图书数量
@@ -46,28 +52,20 @@ public class OrderItem {
 		this.orders = orders;
 	}
 
-	public Integer getBookISBN() {
-		return bookISBN;
+	public PublishHouse getPublishHouse() {
+		return publishHouse;
 	}
 
-	public void setBookISBN(Integer bookISBN) {
-		this.bookISBN = bookISBN;
+	public void setPublishHouse(PublishHouse publishHouse) {
+		this.publishHouse = publishHouse;
 	}
 
-	public Integer getPublishHouseId() {
-		return publishHouseId;
+	public Author getAuthor() {
+		return author;
 	}
 
-	public void setPublishHouseId(Integer publishHouseId) {
-		this.publishHouseId = publishHouseId;
-	}
-
-	public Integer getAuthorId() {
-		return authorId;
-	}
-
-	public void setAuthorId(Integer authorId) {
-		this.authorId = authorId;
+	public void setAuthor(Author author) {
+		this.author = author;
 	}
 
 	public Date getDeliveTime() {
@@ -102,10 +100,22 @@ public class OrderItem {
 		this.payTime = payTime;
 	}
 
+	public Book getBook() {
+		return book;
+	}
+
+	public void setBook(Book book) {
+		this.book = book;
+	}
+
+	public void setOrders(Orders orders) {
+		this.orders = orders;
+	}
+
 	@Override
 	public String toString() {
-		return "orderItem [orderItemNumber=" + orderItemNumber + ", orderNumber=" + orders + ", bookISBN=" + bookISBN
-				+ ", publishHouseId=" + publishHouseId + ", authorId=" + authorId + ", deliveTime=" + deliveTime
+		return "OrderItem [orderItemNumber=" + orderItemNumber + ", orders=" + orders + ", book=" + book
+				+ ", publishHouse=" + publishHouse + ", author=" + author + ", deliveTime=" + deliveTime
 				+ ", orderStatus=" + orderStatus + ", bookCount=" + bookCount + ", payTime=" + payTime + "]";
 	}
 

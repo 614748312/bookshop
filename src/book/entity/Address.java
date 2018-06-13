@@ -17,7 +17,7 @@ public class Address {
 	@GenericGenerator(name = "addressId", strategy = "native")
 	private Integer addressId;
 	@ManyToOne
-	@JoinColumn(name = "userId", referencedColumnName = "userId")
+	@JoinColumn(name = "userName", referencedColumnName = "userName")
 	private User user;// 用户实体类
 	private String province;// 省份
 	private String city;// 城市

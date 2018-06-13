@@ -16,9 +16,11 @@ public class Items {
 	@GeneratedValue(generator = "itemsId")
 	@GenericGenerator(name = "itemsId", strategy = "native")
 	private Integer itemsId;// 购物车中商品项id
-	private Integer bookISBN;
 	@ManyToOne
-	@JoinColumn(name = "orderNamber")
+	@JoinColumn(name = "bookISBN")
+	private Book book;
+	@ManyToOne
+	@JoinColumn(name = "orderNumber")
 	private Orders orders;// 订单表实体类
 	private boolean payStatus;// 商品项状态，默认false（未支付）,ture(已支付)
 	private Integer bookCount;// 此商品项图书数量
@@ -29,14 +31,6 @@ public class Items {
 
 	public void setItemsId(Integer itemsId) {
 		this.itemsId = itemsId;
-	}
-
-	public Integer getBookISBN() {
-		return bookISBN;
-	}
-
-	public void setBookISBN(Integer bookISBN) {
-		this.bookISBN = bookISBN;
 	}
 
 	public Orders getOrders() {
@@ -63,10 +57,18 @@ public class Items {
 		this.bookCount = bookCount;
 	}
 
+	public Book getBook() {
+		return book;
+	}
+
+	public void setBook(Book book) {
+		this.book = book;
+	}
+
 	@Override
 	public String toString() {
-		return "Items [itemsId=" + itemsId + ", bookISBN=" + bookISBN + ", orderNamber=" + orders + ", payStatus="
-				+ payStatus + ", bookCount=" + bookCount + "]";
+		return "Items [itemsId=" + itemsId + ", book=" + book + ", orders=" + orders + ", payStatus=" + payStatus
+				+ ", bookCount=" + bookCount + "]";
 	}
 
 }

@@ -14,21 +14,20 @@ import org.hibernate.annotations.GenericGenerator;
 @Table(name = "tab_diary")
 public class Diary {
 	@Id
-	@GeneratedValue(generator = "DiaryId")
-	@GenericGenerator(name = "DiaryId", strategy = "native")
-	private Integer DiaryId;// 日志id
+	@GeneratedValue(generator = "diaryId")
+	@GenericGenerator(name = "diaryId", strategy = "native")
+	private Integer diaryId;// 日志id
 	private Date loginInTime;// 登陆时间
 	private Date loginOutTime;// 登出时间
 	@Column(name = "diaryInfo", columnDefinition = "TEXT", nullable = true)
 	private String diaryInfo;// 日志信息
-	private Integer managerId;// 管理员id
 
 	public Integer getDiaryId() {
-		return DiaryId;
+		return diaryId;
 	}
 
 	public void setDiaryId(Integer diaryId) {
-		DiaryId = diaryId;
+		this.diaryId = diaryId;
 	}
 
 	public Date getLoginInTime() {
@@ -55,18 +54,10 @@ public class Diary {
 		this.diaryInfo = diaryInfo;
 	}
 
-	public Integer getManagerId() {
-		return managerId;
-	}
-
-	public void setManagerId(Integer managerId) {
-		this.managerId = managerId;
-	}
-
 	@Override
 	public String toString() {
-		return "Diary [DiaryId=" + DiaryId + ", loginInTime=" + loginInTime + ", loginOutTime=" + loginOutTime
-				+ ", diaryInfo=" + diaryInfo + ", managerId=" + managerId + "]";
+		return "Diary [diaryId=" + diaryId + ", loginInTime=" + loginInTime + ", loginOutTime=" + loginOutTime
+				+ ", diaryInfo=" + diaryInfo + "]";
 	}
 
 }

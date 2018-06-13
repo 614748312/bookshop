@@ -110,8 +110,12 @@ public class Book {
 		return publishHouse;
 	}
 
-	public void setPublishHouse(PublishHouse publishHouseId) {
+	public void setPublishHouse(PublishHouse publishHouse) {
 		this.publishHouse = publishHouse;
+	}
+
+	public void setBookISBN(Integer bookISBN) {
+		this.bookISBN = bookISBN;
 	}
 
 	@Override
