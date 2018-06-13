@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 import book.dao.PublishHouseDao;
 import book.service.PublishHouseService;
 
-@Service("infoService")
+@Service("publishService")
 @Transactional
 public class PublishHouseServiceImpl implements PublishHouseService {
 	@Autowired // 注入

@@ -153,7 +153,9 @@ ServletRequestAware,ServletResponseAware{
 	     MailSender mailSender = new MailSender(username,password);
 	     String recipient = request.getParameter("Email");
 	     user=userService.findUserByEmail(recipient);
-	     Mail mail = new Mail("你的用户名是:","你的密码是");
+	     String info="用户名:'+user.getUserName()+'密码:'+user.getPassword()+'";
+	     System.out.println(info);
+	     Mail mail = new Mail("找回密码",info);
 	     try {
 	            mailSender.send(recipient, mail);
 	        } catch (AddressException e) {
