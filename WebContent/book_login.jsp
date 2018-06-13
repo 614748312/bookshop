@@ -38,17 +38,18 @@
 					<div class="login_valid">
 						<span class="login_valid_nm">验证码：</span>
 						<input type="password" name="yzm" value="" class="yzm" placeholder="验证码" />
-					    <div class="btn111"><img alt="点击图片" src="${pageContext.request.contextPath}/validateCode.action" onclick=""></div>
+					    <div class="btn111">
+					   		<img class="imgvalidate" alt="点击图片" src="${pageContext.request.contextPath}/validateCode.action" onclick=""></div>
 					    <div class="bbb1" id="bbb3"></div> 
 					</div>
 					<div class="login_tr">
 						<input type="submit" class="ltn" id="login_ltn" value="登陆" onclick="login1()">
 					</div>
 					<div class="login_wj fr">
-						<button type="button" class="btn" id="qqqqq">
+						<button type="button" class="btn" id="forget">
                                                   忘记密码
                         </button>
-						<!--<a href="changpsw.html">忘记密码</a>-->&nbsp;&nbsp;|&nbsp;&nbsp;
+				
 
 						<!-- Modal -->
 						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -76,7 +77,7 @@
 
 						<!-- Events -->
 						<script>
-							$("#qqqqq").click(function() {
+							$("#forget").click(function() {
 								$("#myModal").modal('show');
 							})
 						</script>
