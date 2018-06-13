@@ -1,4 +1,4 @@
-package book.entity;
+package book.service;
 
 public interface ItemsService {
 
