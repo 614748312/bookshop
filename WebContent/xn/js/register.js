@@ -1,9 +1,9 @@
 $(document)
 		.ready(
 				function() {
-					$("#ipuser").blur(function() {/* 用户名---焦点失去执行方法 */
-						var rxuser = /^[\u4e00-\u9fa5A-Za-z0-9]{4,20}$/;
-						uname = $("#ipuser").val();
+					$("#ipuser").blur(function() {/* 用户名---焦点失去执行方法 */						
+						var rxuser = /^[A-Za-z0-9]{4,20}$/;
+						uname = $("#ipuser").val();				
 						var spanContent = document.getElementById("aa");
 						getxhr();
 						var sendData = "UserName=" + uname+ "&t=" + Math.random();
@@ -16,29 +16,30 @@ $(document)
 								if(uname.length==0){
 								   spanContent.style.color = "red";
 								   spanContent.innerText = "用户名为空";
-								} else if(!rxuser.test(uname)){
+								}
+								else if(!rxuser.test(uname)){
 								   spanContent.style.color = "red";
 								   spanContent.innerText = "用户名格式错误";
 								}
-								if(registerdata.checkResult == false) {
+								else if(registerdata.checkResult == false) {
 								   spanContent.style.color = "red";
 								   spanContent.innerText = "用户名已存在";
 								} else if (registerdata.checkResult == true && rxuser.test(uname)) {
-								   spanContent.style.color = "black";
+								   spanContent.style.color = "green";
 								   document.getElementById("aa").innerText = "输入正确";
 								}
 							}
 						}
 					});
 					$("#ipnc").blur(function() {/* 昵称---焦点失去执行方法 */
-						var rxnc = /^[\u4e00-\u9fa5A-Za-z0-9]{4,20}$/;
+					
 						var nc = $("#ipnc").val();
 						var ncContent = document.getElementById("bb");
-						if (nc.length == 0 || !rxnc.test(nc)) {
+						if (nc.length == 0){
 							ncContent.style.color = "red";
-							ncContent.innerText = "昵称输入有误";
+							ncContent.innerText = "昵称不能为空";
 						} else {
-							ncContent.style.color = "black";
+							ncContent.style.color = "green";
 							ncContent.innerText = "输入正确";
 							nc = $("#ipnc").val();
 
@@ -52,7 +53,7 @@ $(document)
 							phoneContent.style.color = "red";
 							phoneContent.innerText = "号码输入有误";
 						} else {
-							phoneContent.style.color = "black";
+							phoneContent.style.color = "green";
 							phoneContent.innerText = "输入正确";
 							phone = $("#ipphone").val();
 						}
@@ -69,7 +70,7 @@ $(document)
 							paswContent.style.color = "red";
 							paswContent.innerText = "密码输入有误";
 						} else {
-							paswContent.style.color = "black";
+							paswContent.style.color = "green";
 							paswContent.innerText = "输入正确";
 							pasw = $("#ippasw").val();
 						}
@@ -99,7 +100,7 @@ $(document)
 											emailContent.style.color = "red";
 											emailContent.innerText = "邮箱输入有误";
 										} else {
-											emailContent.style.color = "black";
+											emailContent.style.color = "green";
 											emailContent.innerText = "输入正确";
 											email = $("#ipemail").val();
 										}

@@ -31,7 +31,7 @@ function ajax(userName,password,yzm) {
             	$("#bbb1").css({color:"red"});
         		$("#bbb1").html("该用户名不存在!");
             }else if (logindata.checkResult == true){  
-                window.location.href="success.jsp";   
+                window.location.href="book_index.jsp";   
             }else if (logindata.checkResult == false){  
             	$("#bbb2").css({color:"red"});
         		$("#bbb2").html("密码输入错误!");
