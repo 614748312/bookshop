@@ -38,7 +38,8 @@
 					<div class="login_valid">
 						<span class="login_valid_nm">验证码：</span>
 						<input type="password" name="yzm" value="" class="yzm" placeholder="验证码" />
-					    <div class="btn111"><img alt="点击图片" src="${pageContext.request.contextPath}/validateCode.action" onclick=""></div>
+					    <div class="btn111">
+					    	<img  class="passimg" alt="点击图片" src="${pageContext.request.contextPath}/validateCode.action" onclick="" ></div>
 					    <div class="bbb1" id="bbb3"></div> 
 					</div>
 					<div class="login_tr">
