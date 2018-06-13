@@ -21,7 +21,6 @@ public class Diary {
 	private Date loginOutTime;// 登出时间
 	@Column(name = "diaryInfo", columnDefinition = "TEXT", nullable = true)
 	private String diaryInfo;// 日志信息
-	private Integer managerId;// 管理员id
 
 	public Integer getDiaryId() {
 		return DiaryId;
@@ -55,18 +54,11 @@ public class Diary {
 		this.diaryInfo = diaryInfo;
 	}
 
-	public Integer getManagerId() {
-		return managerId;
-	}
-
-	public void setManagerId(Integer managerId) {
-		this.managerId = managerId;
-	}
-
 	@Override
 	public String toString() {
 		return "Diary [DiaryId=" + DiaryId + ", loginInTime=" + loginInTime + ", loginOutTime=" + loginOutTime
-				+ ", diaryInfo=" + diaryInfo + ", managerId=" + managerId + "]";
+				+ ", diaryInfo=" + diaryInfo + "]";
 	}
 
+	
 }

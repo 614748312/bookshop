@@ -22,7 +22,9 @@ public class OrderItem {
 	@ManyToOne
 	@JoinColumn(name = "orderNumber")
 	private Orders orders;// 订单实体类
-	private Integer bookISBN;// 图书编号
+	@ManyToOne
+	@JoinColumn(name = "bookISBN")
+	private Book book;// 图书编号
 	private Integer publishHouseId;// 出版社id
 	private Integer authorId;// 图书作者
 	private Date deliveTime;// 发货时间
@@ -44,14 +46,6 @@ public class OrderItem {
 
 	public void setOrderNumber(Orders orders) {
 		this.orders = orders;
-	}
-
-	public Integer getBookISBN() {
-		return bookISBN;
-	}
-
-	public void setBookISBN(Integer bookISBN) {
-		this.bookISBN = bookISBN;
 	}
 
 	public Integer getPublishHouseId() {
@@ -102,11 +96,24 @@ public class OrderItem {
 		this.payTime = payTime;
 	}
 
+	public Book getBook() {
+		return book;
+	}
+
+	public void setBook(Book book) {
+		this.book = book;
+	}
+
+	public void setOrders(Orders orders) {
+		this.orders = orders;
+	}
+
 	@Override
 	public String toString() {
-		return "orderItem [orderItemNumber=" + orderItemNumber + ", orderNumber=" + orders + ", bookISBN=" + bookISBN
+		return "OrderItem [orderItemNumber=" + orderItemNumber + ", orders=" + orders + ", book=" + book
 				+ ", publishHouseId=" + publishHouseId + ", authorId=" + authorId + ", deliveTime=" + deliveTime
 				+ ", orderStatus=" + orderStatus + ", bookCount=" + bookCount + ", payTime=" + payTime + "]";
 	}
+
 
 }

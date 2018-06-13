@@ -3,6 +3,8 @@ package book.entity;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
@@ -15,7 +17,9 @@ public class Orders {
 	@GenericGenerator(name = "orderNumber", strategy = "native")
 	private Integer orderNumber;// 订单编号
 	private Double totalMoney;// 总订单金额
-	private String userName;// 用户名
+	@ManyToOne
+	@JoinColumn(name = "userName")
+	private User user;// 用户名
 	private Integer orderItemId;// 订单项Id
 	private Integer itemsId;// 商品项id
 
@@ -35,13 +39,7 @@ public class Orders {
 		this.totalMoney = totalMoney;
 	}
 
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
+	
 
 	public Integer getItemsId() {
 		return itemsId;
@@ -51,18 +49,26 @@ public class Orders {
 		this.itemsId = itemsId;
 	}
 
-	@Override
-	public String toString() {
-		return "Orders [orderNumber=" + orderNumber + ", totalMoney=" + totalMoney + ", userName=" + userName
-				+ ", orderItemsId=" + orderItemId + ", itemsId=" + itemsId + "]";
-	}
-
 	public Integer getOrderItemId() {
 		return orderItemId;
 	}
 
 	public void setOrderItemId(Integer orderItemId) {
 		this.orderItemId = orderItemId;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	@Override
+	public String toString() {
+		return "Orders [orderNumber=" + orderNumber + ", totalMoney=" + totalMoney + ", user=" + user + ", orderItemId="
+				+ orderItemId + ", itemsId=" + itemsId + "]";
 	}
 
 }

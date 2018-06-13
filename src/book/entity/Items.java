@@ -16,7 +16,9 @@ public class Items {
 	@GeneratedValue(generator = "itemsId")
 	@GenericGenerator(name = "itemsId", strategy = "native")
 	private Integer itemsId;// 购物车中商品项id
-	private Integer bookISBN;
+	@ManyToOne
+	@JoinColumn(name = "bookISBN")
+	private Book book;
 	@ManyToOne
 	@JoinColumn(name = "orderNamber")
 	private Orders orders;// 订单表实体类
@@ -29,14 +31,6 @@ public class Items {
 
 	public void setItemsId(Integer itemsId) {
 		this.itemsId = itemsId;
-	}
-
-	public Integer getBookISBN() {
-		return bookISBN;
-	}
-
-	public void setBookISBN(Integer bookISBN) {
-		this.bookISBN = bookISBN;
 	}
 
 	public Orders getOrders() {
@@ -63,10 +57,19 @@ public class Items {
 		this.bookCount = bookCount;
 	}
 
+	public Book getBook() {
+		return book;
+	}
+
+	public void setBook(Book book) {
+		this.book = book;
+	}
+
 	@Override
 	public String toString() {
-		return "Items [itemsId=" + itemsId + ", bookISBN=" + bookISBN + ", orderNamber=" + orders + ", payStatus="
-				+ payStatus + ", bookCount=" + bookCount + "]";
+		return "Items [itemsId=" + itemsId + ", book=" + book + ", orders=" + orders + ", payStatus=" + payStatus
+				+ ", bookCount=" + bookCount + "]";
 	}
+
 
 }
