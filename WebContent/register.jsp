@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="css/register.css" />
 		<link rel="stylesheet" href="css/bottom_style.css" />
 		<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
-		<script type="text/javascript" src="js/aa.js" ></script>
+		<script type="text/javascript" src="js/register.js" ></script>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
 				   <a href="login.jsp">登陆</a>	
 			    </div>
 			</div>
-		<form class="form2" method="post" action="register" name="form1">
+		<form class="form2" method="post" action="register" name="form1" onsubmit="checkcolor()">
 			<div class="form_help">
 				<img src="img/icon_03.png" style="margin-right: 1px;">
 				<a href="#" class="help_icon" >首页</a>
@@ -37,7 +37,7 @@
 			<div>
 				<span class="tip">用户名：</span>
 				<input type="text" id="ipuser" name="userName" value="" class="uersname" placeholder="请输入用户名">
-				<span class="one"  id="aa"></span>
+				<span class="one" id="aa" ></span>
 			</div>
 
 			<div><span class="tip">昵称：</span>

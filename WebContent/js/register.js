@@ -57,10 +57,8 @@ $(document)
 							phone = $("#ipphone").val();
 						}
 					});
-
 					// 获得性别
 					gender = $("input[name='sex']:checked").val();
-
 					$("#ippasw").blur(function() {/* 焦点失去执行方法 */
 						var rxpasw = /^[a-zA-Z0-9]{6,12}$/;
 						var pasw = $("#ippasw").val();
@@ -68,22 +66,21 @@ $(document)
 						if (pasw.length = 0 || !rxpasw.test(pasw)) {
 							paswContent.style.color = "red";
 							paswContent.innerText = "密码输入有误";
+							
 						} else {
 							paswContent.style.color = "black";
 							paswContent.innerText = "输入正确";
 							pasw = $("#ippasw").val();
 						}
 					});
-
 					$("#ippassword")
 							.change(
 									function() {/* 焦点失去执行方法 */
-
 										if (this.value != $("#ippasw").val()) {
+											document.getElementById("ee").style.color="red";
 											document.getElementById("ee").innerText = "两次密码输入不一致 ";
 										} else {
 											document.getElementById("ee").innerText = "输入正确";
-
 										}
 									});
 
@@ -118,3 +115,8 @@ $(document)
 						}
 					}
 				});
+function checkcolor(){
+	var uil=$("#ipemail").css("color");
+	alert($("#ipemail").css("color"));
+	return false;
+}
