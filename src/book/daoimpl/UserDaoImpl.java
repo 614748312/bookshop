@@ -30,8 +30,8 @@ public class UserDaoImpl implements UserDao{
 	@Override
 	public User findUserByEmail(String recipient) {
 		// TODO Auto-generated method stub
-		User user= (User) hibernateTemplate.find("from User where email=?", recipient);
-		return user;
+		List<User> list = (List<User>) hibernateTemplate.find("from User where email=?", recipient);
+		return list.isEmpty()?null:list.get(0);
 	}
 	
 }
