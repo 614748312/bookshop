@@ -20,9 +20,6 @@ public class Orders {
 	@ManyToOne
 	@JoinColumn(name = "userName")
 	private User user;// 用户名
-	private Integer orderItemId;// 订单项Id
-	private Integer itemsId;// 商品项id
-
 	public Integer getOrderNumber() {
 		return orderNumber;
 	}
@@ -41,21 +38,7 @@ public class Orders {
 
 	
 
-	public Integer getItemsId() {
-		return itemsId;
-	}
-
-	public void setItemsId(Integer itemsId) {
-		this.itemsId = itemsId;
-	}
-
-	public Integer getOrderItemId() {
-		return orderItemId;
-	}
-
-	public void setOrderItemId(Integer orderItemId) {
-		this.orderItemId = orderItemId;
-	}
+	
 
 	public User getUser() {
 		return user;
@@ -67,8 +50,8 @@ public class Orders {
 
 	@Override
 	public String toString() {
-		return "Orders [orderNumber=" + orderNumber + ", totalMoney=" + totalMoney + ", user=" + user + ", orderItemId="
-				+ orderItemId + ", itemsId=" + itemsId + "]";
+		return "Orders [orderNumber=" + orderNumber + ", totalMoney=" + totalMoney + ", user=" + user + "]";
 	}
 
+	
 }
