@@ -25,8 +25,12 @@ public class OrderItem {
 	@ManyToOne
 	@JoinColumn(name = "bookISBN")
 	private Book book;// 图书编号
-	private Integer publishHouseId;// 出版社id
-	private Integer authorId;// 图书作者
+	@ManyToOne
+	@JoinColumn(name = "publishHouseId")
+	private PublishHouse publishHouse;// 出版社id
+	@ManyToOne
+	@JoinColumn(name = "authorId")
+	private Author author;// 图书作者id
 	private Date deliveTime;// 发货时间
 	private boolean orderStatus;// 图书状态，默认为false（未发货），ture（已发货）
 	private Integer bookCount;// 图书数量
@@ -48,20 +52,22 @@ public class OrderItem {
 		this.orders = orders;
 	}
 
-	public Integer getPublishHouseId() {
-		return publishHouseId;
+	
+
+	public PublishHouse getPublishHouse() {
+		return publishHouse;
 	}
 
-	public void setPublishHouseId(Integer publishHouseId) {
-		this.publishHouseId = publishHouseId;
+	public void setPublishHouse(PublishHouse publishHouse) {
+		this.publishHouse = publishHouse;
 	}
 
-	public Integer getAuthorId() {
-		return authorId;
+	public Author getAuthor() {
+		return author;
 	}
 
-	public void setAuthorId(Integer authorId) {
-		this.authorId = authorId;
+	public void setAuthor(Author author) {
+		this.author = author;
 	}
 
 	public Date getDeliveTime() {
@@ -111,7 +117,7 @@ public class OrderItem {
 	@Override
 	public String toString() {
 		return "OrderItem [orderItemNumber=" + orderItemNumber + ", orders=" + orders + ", book=" + book
-				+ ", publishHouseId=" + publishHouseId + ", authorId=" + authorId + ", deliveTime=" + deliveTime
+				+ ", publishHouse=" + publishHouse + ", author=" + author + ", deliveTime=" + deliveTime
 				+ ", orderStatus=" + orderStatus + ", bookCount=" + bookCount + ", payTime=" + payTime + "]";
 	}
 
