@@ -20,6 +20,7 @@ public class Orders {
 	@ManyToOne
 	@JoinColumn(name = "userName")
 	private User user;// 用户名
+
 	public Integer getOrderNumber() {
 		return orderNumber;
 	}
@@ -36,10 +37,6 @@ public class Orders {
 		this.totalMoney = totalMoney;
 	}
 
-	
-
-	
-
 	public User getUser() {
 		return user;
 	}
@@ -53,5 +50,4 @@ public class Orders {
 		return "Orders [orderNumber=" + orderNumber + ", totalMoney=" + totalMoney + ", user=" + user + "]";
 	}
 
-	
 }

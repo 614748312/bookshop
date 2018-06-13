@@ -52,8 +52,6 @@ public class OrderItem {
 		this.orders = orders;
 	}
 
-	
-
 	public PublishHouse getPublishHouse() {
 		return publishHouse;
 	}
@@ -120,6 +118,5 @@ public class OrderItem {
 				+ ", publishHouse=" + publishHouse + ", author=" + author + ", deliveTime=" + deliveTime
 				+ ", orderStatus=" + orderStatus + ", bookCount=" + bookCount + ", payTime=" + payTime + "]";
 	}
-
 
 }
