@@ -20,7 +20,7 @@ public class Items {
 	@JoinColumn(name = "bookISBN")
 	private Book book;
 	@ManyToOne
-	@JoinColumn(name = "orderNamber")
+	@JoinColumn(name = "orderNumber")
 	private Orders orders;// 订单表实体类
 	private boolean payStatus;// 商品项状态，默认false（未支付）,ture(已支付)
 	private Integer bookCount;// 此商品项图书数量
