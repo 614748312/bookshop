@@ -25,7 +25,7 @@
 			</div>
 			<div>
 				<span class="tip">用户名：</span>
-				<input type="text" id="ipuser" name="" value="" class="uersname" placeholder="请输入用户名">
+				<input type="text" id="ipuser" name="" value="" class="uersname" placeholder="请输入用户名 6到15数字，字母组合 以字母开头 ">
 				<span class="one"  id="aa"></span>
 			</div>
 
