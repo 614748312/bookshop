@@ -141,6 +141,10 @@ ServletRequestAware,ServletResponseAware{
 		userService.register(user);
 		return "success";
 	}
+	@Action(value="sendEmail")
+	public void sendEmail(){
+		
+	}
 	@Override
 	public void setServletResponse(HttpServletResponse response) {
 		this.response=response;
