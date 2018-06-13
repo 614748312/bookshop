@@ -10,4 +10,6 @@ public interface UserService {
 
 	String check(String userNameAjax);
 
+	User findUserByEmail(String recipient);
+
 }
