@@ -25,7 +25,7 @@ import net.sf.json.JSONObject;
 
 @ParentPackage("struts-default")
 @Namespace("/")
-@Controller("userAction")   
+@Controller("userAction")
 @Scope("prototype")
 public class UserAction extends ActionSupport implements ModelDriven<User>,
 ServletRequestAware,ServletResponseAware{
