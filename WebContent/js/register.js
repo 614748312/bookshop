@@ -2,7 +2,7 @@ $(document)
 		.ready(
 				function() {
 					$("#ipuser").blur(function() {/* 用户名---焦点失去执行方法 */
-						var rxuser = /^[\u4e00-\u9fa5A-Za-z0-9]{4,20}$/;
+						var rxuser = /^[\u4e00-\u9fa5A-Za-z0-9]{5,15}$/;
 						uname = $("#ipuser").val();
 						var spanContent = document.getElementById("aa");
 						getxhr();
