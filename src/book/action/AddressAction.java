@@ -26,7 +26,7 @@ import book.service.AddressService;
 @Controller("addressAction") // 创建对象
 @Scope("prototype") // 多实例方式创建对象
 public class AddressAction extends ActionSupport implements ModelDriven<Address> {
-	Address address = new Address();
+	private Address address = new Address();
 	HttpServletRequest request = ServletActionContext.getRequest();
 	HttpSession session = request.getSession();
 	String userName = (String) session.getAttribute("userName");
@@ -126,7 +126,7 @@ public class AddressAction extends ActionSupport implements ModelDriven<Address>
 	@Override
 	public Address getModel() {
 		// TODO Auto-generated method stub
-		return address;
+		return null;
 	}
 
 }

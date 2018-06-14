@@ -16,6 +16,4 @@ public interface PublishHouseDao {
 
 	List<PublishHouse> findPublishHouse(int currentPage, int pageSize);
 
-	int getPublishHouseCount(String publishHouseId);
-
 }

@@ -19,7 +19,7 @@ public class AddressDaoImpl implements AddressDao {
 
 	@Override
 	public int getAdderssCount(String userName) {
-		String sql = "select count(*) from tab_address where 1=1";
+		String sql = "select count(*) from Address where 1=1";
 		List list1 = new ArrayList<>();
 		if (userName != null && userName.length() > 0) {
 			sql += " and userName = '" + userName + "'";

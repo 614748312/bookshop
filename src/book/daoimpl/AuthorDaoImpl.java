@@ -19,7 +19,7 @@ public class AuthorDaoImpl implements AuthorDao {
 
 	@Override
 	public int getAuthorCount(Integer authorId) {
-		String sql = "select count(*) from tab_author where 1=1";
+		String sql = "select count(*) from Address where 1=1";
 		List list1 = new ArrayList<>();
 		if (authorId != null) {
 			sql += " and authorId = '" + authorId + "'";
@@ -35,7 +35,6 @@ public class AuthorDaoImpl implements AuthorDao {
 			criteria.add(Restrictions.eq("authorId", authorId));
 		}
 		return (List<Author>) hibernateTemplate.findByCriteria(criteria, (currentPage - 1) * pageSize, pageSize);
-
 	}
 
 	@Override
