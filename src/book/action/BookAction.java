@@ -13,49 +13,46 @@ import org.springframework.stereotype.Controller;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
-import book.entity.Author;
+import book.entity.Book;
 import book.entity.PageBean;
-import book.service.AuthorService;
+import book.service.BookService;
 
 @ParentPackage("struts-default")
 @Namespace("/")
-@Controller("authorAction") // 创建对象
+@Controller("bookAction") // 创建对象
 @Scope("prototype") // 多实例方式创建对象
-public class AuthorAction extends ActionSupport implements ModelDriven<Author> {
-	private Author author = new Author();
-	private Integer authorId;
+public class BookAction extends ActionSupport implements ModelDriven<Book> {
+	private Book book = new Book();
 
-	public Author getAuthor() {
-		return author;
+	public Book getBook() {
+		return book;
 	}
 
-	public void setAuthor(Author author) {
-		this.author = author;
+	public void setBook(Book book) {
+		this.book = book;
 	}
 
-	public Integer getAuthorId() {
-		return authorId;
-	}
-
-	public void setAuthorId(Integer authorId) {
-		this.authorId = authorId;
+	@Override
+	public Book getModel() {
+		// TODO Auto-generated method stub
+		return book;
 	}
 
 	@Autowired
-	private AuthorService authorService;
-	private List<Author> list = null;
+	private BookService bookService;
+	private List<Book> list = null;
 
-	public List<Author> getList() {
+	public List<Book> getList() {
 		return list;
 	}
 
-	public void setList(List<Author> list) {
+	public void setList(List<Book> list) {
 		this.list = list;
 	}
 
 	private int currentPage = 1; // 当前页
 	private int pageSize = 2;// 默认每页显示条数
-	private PageBean<Author> pb; // ${pb}
+	private PageBean<Book> pb; // ${pb}
 
 	public int getCurrentPage() {
 		return currentPage;
@@ -73,28 +70,20 @@ public class AuthorAction extends ActionSupport implements ModelDriven<Author> {
 		this.pageSize = pageSize;
 	}
 
-	public PageBean<Author> getPb() {
+	public PageBean<Book> getPb() {
 		return pb;
 	}
 
-	public void setPb(PageBean<Author> pb) {
+	public void setPb(PageBean<Book> pb) {
 		this.pb = pb;
 	}
 
-	// 根据作者Id查询作者
-	@Action(value = "/admin/findAllInfo", results = { @Result(name = "success", location = "/admin/info/list.jsp") })
-	public String findAuthorByAuthorId() {
-		pb = authorService.findAuthorByAuthorId(currentPage, pageSize, authorId);
-		this.setPb(pb);
-		return "success";
-	}
-
 	// 添加信息
-	@Action(value = "addAuthor", results = {
+	@Action(value = "addBook", results = {
 			@Result(name = "success", location = "/admin/findInfosByPage", type = "redirect") })
-	public String addAuthor() {
+	public String addBook() {
 		try {
-			authorService.addAuthor(author);
+			bookService.addBook(book);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -102,11 +91,11 @@ public class AuthorAction extends ActionSupport implements ModelDriven<Author> {
 	}
 
 	// 删除信息
-	@Action(value = "delAuthor", results = {
+	@Action(value = "delBook", results = {
 			@Result(name = "success", location = "/admin/findInfosByPage", type = "redirect") })
-	public String delAddress() {
+	public String delBook() {
 		try {
-			authorService.delAuthor(author);
+			bookService.delBook(book);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -114,21 +103,14 @@ public class AuthorAction extends ActionSupport implements ModelDriven<Author> {
 	}
 
 	// 更新信息
-	@Action(value = "updateAuthor", results = {
-			@Result(name = "updateAuthor", location = "/admin/findInfosByPage", type = "redirect") })
-	public String updateInfo() {
+	@Action(value = "updateBook", results = {
+			@Result(name = "updateBook", location = "/admin/findInfosByPage", type = "redirect") })
+	public String updateBook() {
 		try {
-			authorService.updateAuthor(author);
+			bookService.updateBook(book);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return "updateAuthor";
+		return "updateBook";
 	}
-
-	@Override
-	public Author getModel() {
-		// TODO Auto-generated method stub
-		return author;
-	}
-
 }
