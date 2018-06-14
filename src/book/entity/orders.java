@@ -3,112 +3,51 @@ package book.entity;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@Table(name = "orders")
-public class orders {
+@Table(name = "tab_orders")
+public class Orders {
 	@Id
-	@GeneratedValue(generator = "id")
-	@GenericGenerator(name = "id", strategy = "native")
-	private Integer id;
-	private String orderNumber;
-	private String orderStatus;
-	private String userName;
-	private String deliverTime;
-	private String payTime;
-	private String publishingHouse;
-	private String bookName;
-	private String author;
-	private Integer bookCount;
+	@GeneratedValue(generator = "orderNumber")
+	@GenericGenerator(name = "orderNumber", strategy = "native")
+	private Integer orderNumber;// 订单编号
+	private Double totalMoney;// 总订单金额
+	@ManyToOne
+	@JoinColumn(name = "userName")
+	private User user;// 用户名
 
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public String getOrderNumber() {
+	public Integer getOrderNumber() {
 		return orderNumber;
 	}
 
-	public void setOrderNumber(String orderNumber) {
+	public void setOrderNumber(Integer orderNumber) {
 		this.orderNumber = orderNumber;
 	}
 
-	public String getAuthor() {
-		return author;
+	public Double getTotalMoney() {
+		return totalMoney;
 	}
 
-	public void setAuthor(String author) {
-		this.author = author;
+	public void setTotalMoney(Double totalMoney) {
+		this.totalMoney = totalMoney;
 	}
 
-	public Integer getBookCount() {
-		return bookCount;
+	public User getUser() {
+		return user;
 	}
 
-	public void setBookCount(Integer bookCount) {
-		this.bookCount = bookCount;
-	}
-
-	public String getOrderStatus() {
-		return orderStatus;
-	}
-
-	public void setOrderStatus(String orderStatus) {
-		this.orderStatus = orderStatus;
-	}
-
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-
-	public String getDeliverTime() {
-		return deliverTime;
-	}
-
-	public void setDeliverTime(String deliverTime) {
-		this.deliverTime = deliverTime;
-	}
-
-	public String getPayTime() {
-		return payTime;
-	}
-
-	public void setPayTime(String payTime) {
-		this.payTime = payTime;
-	}
-
-	public String getPublishingHouse() {
-		return publishingHouse;
-	}
-
-	public void setPublishingHouse(String publishingHouse) {
-		this.publishingHouse = publishingHouse;
-	}
-
-	public String getBookName() {
-		return bookName;
-	}
-
-	public void setBookName(String bookName) {
-		this.bookName = bookName;
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 	@Override
 	public String toString() {
-		return "orders [id=" + id + ", orderNumber=" + orderNumber + ", orderStatus=" + orderStatus + ", userName="
-				+ userName + ", deliverTime=" + deliverTime + ", payTime=" + payTime + ", publishingHouse="
-				+ publishingHouse + ", bookName=" + bookName + ", author=" + author + ", bookCount=" + bookCount + "]";
+		return "Orders [orderNumber=" + orderNumber + ", totalMoney=" + totalMoney + ", user=" + user + "]";
 	}
 
 }

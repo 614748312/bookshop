@@ -7,15 +7,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.GeneratorType;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@Table(name = "user")
+@Table(name = "tab_user")
 public class User {
 	@Id
-	@GeneratedValue(generator="id")
-	@GenericGenerator(name="id",strategy="native")
-	private Integer id;
+	@GenericGenerator(name = "userName",strategy = "assigned")
+	@GeneratedValue(generator = "userName")
 	private String userName;
 	private String password;
 	private String email;
@@ -40,15 +40,6 @@ public class User {
 		this.password = password;
 	}
 
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	
 	public String getEmail() {
 		return email;
 	}
@@ -91,10 +82,8 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", userName=" + userName + ", password=" + password + ", email=" + email
-				+ ", phoneNumber=" + phoneNumber + ", sex=" + sex + ", nickName=" + nickName + ", birthday=" + birthday
-				+ "]";
+		return "User [userName=" + userName + ", password=" + password + ", email=" + email + ", phoneNumber="
+				+ phoneNumber + ", sex=" + sex + ", nickName=" + nickName + ", birthday=" + birthday + "]";
 	}
-
 
 }

@@ -6,45 +6,54 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
+
 @Entity
-@Table(name = "publishhouse")
-public class publishhouse {
+@Table(name = "tab_publishhouse")
+public class PublishHouse {
 	@Id
-	@GeneratedValue(generator = "id")
-	@GenericGenerator(name = "id", strategy = "native")
-	private Integer id;
-	private String publishHouseName;
-	private String publishHousePerson;
-	private String publishHousePhone;
-	public Integer getId() {
-		return id;
+	@GeneratedValue(generator = "publishHouseId")
+	@GenericGenerator(name = "publishHouseId", strategy = "native")
+	private Integer publishHouseId;// 出版社id
+	private String publishHouseName;// 出版社名
+	private String publishHousePerson;// 出版社联系人
+	private Integer publishHousePhone;// 出版社联系电话
+
+	public Integer getPublishHouseId() {
+		return publishHouseId;
 	}
-	public void setId(Integer id) {
-		this.id = id;
+
+	public void setPublishHouseId(int publishHouseId) {
+		this.publishHouseId = publishHouseId;
 	}
+
 	public String getPublishHouseName() {
 		return publishHouseName;
 	}
+
 	public void setPublishHouseName(String publishHouseName) {
 		this.publishHouseName = publishHouseName;
 	}
+
 	public String getPublishHousePerson() {
 		return publishHousePerson;
 	}
+
 	public void setPublishHousePerson(String publishHousePerson) {
 		this.publishHousePerson = publishHousePerson;
 	}
-	public String getPublishHousePhone() {
+
+	public Integer getPublishHousePhone() {
 		return publishHousePhone;
 	}
-	public void setPublishHousePhone(String publishHousePhone) {
+
+	public void setPublishHousePhone(int publishHousePhone) {
 		this.publishHousePhone = publishHousePhone;
 	}
+
 	@Override
 	public String toString() {
-		return "publishhouse [id=" + id + ", publishHouseName=" + publishHouseName + ", publishHousePerson="
-				+ publishHousePerson + ", publishHousePhone=" + publishHousePhone + "]";
+		return "PublishHouse [publishHouseId=" + publishHouseId + ", publishHouseName=" + publishHouseName
+				+ ", publishHousePerson=" + publishHousePerson + ", publishHousePhone=" + publishHousePhone + "]";
 	}
-	
 
 }

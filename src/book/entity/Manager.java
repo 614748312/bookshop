@@ -8,19 +8,28 @@ import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@Table(name = "manager")
+@Table(name = "tab_manager")
 public class Manager {
 	@Id
-	@GeneratedValue(generator = "managerName")
-	@GenericGenerator(name = "managerName", strategy = "native")
-	private Integer managerName;
-	private String managerPassword;
+	@GeneratedValue(generator = "managerId")
+	@GenericGenerator(name = "managerId", strategy = "native")
+	private Integer managerId;// 管理员id
+	private String managerName;// 管理员姓名
+	private String managerPassword;// 管理员密码
 
-	public Integer getManagerName() {
+	public Integer getManagerId() {
+		return managerId;
+	}
+
+	public void setManagerId(Integer managerId) {
+		this.managerId = managerId;
+	}
+
+	public String getManagerName() {
 		return managerName;
 	}
 
-	public void setManagerName(Integer managerName) {
+	public void setManagerName(String managerName) {
 		this.managerName = managerName;
 	}
 
@@ -34,7 +43,8 @@ public class Manager {
 
 	@Override
 	public String toString() {
-		return "Manager [managerName=" + managerName + ", managerPassword=" + managerPassword + "]";
+		return "Manager [managerId=" + managerId + ", managerName=" + managerName + ", managerPassword="
+				+ managerPassword + "]";
 	}
 
 }

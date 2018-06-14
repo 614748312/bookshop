@@ -1,235 +1,267 @@
-
-#text_center{
-    width:100%;
-    min-height: 1200px;
+#text_center {
+	width: 100%;
+	min-height: 1200px;
 }
 
 .new_page ul li {
-    height: 60px;
-    width: 60px;
-    margin-left: 10px;
-    border-radius: 15px;
-    color: #fff;
-    background-color: #337ab7;
-    border-color: #2e6da4;
+	height: 60px;
+	width: 60px;
+	margin-left: 10px;
+	border-radius: 15px;
+	color: #fff;
+	background-color: #337ab7;
+	border-color: #2e6da4;
+}
 
+.new_page ul li a {
+	line-height: 65px;
+	font-size: 25px;
+	color: #ff2832;
 }
-.new_page ul li a{
-    line-height: 65px;
-    font-size: 25px;
-    color: #ff2832;
+
+.new_page ul li a:hover {
+	color: blue;
 }
-.new_page ul li a:hover{
-  color: blue;
-}
-.new_page .active{
-    background-color: #ec971f;
+
+.new_page .active {
+	background-color: #ec971f;
 }
 /*左侧畅销榜 采用同样式*/
 /*畅销排行榜*/
-.book_right{
-    height: 730px;
-    width: 17%;
-    box-shadow: 1px 2px 3px rgba(34, 25, 25, 0.5);
-    float:left;
-    margin-left: 15%;
-}
-.book_right_{
-    height: 50px;
-    width: 12%;
-    overflow: hidden;
-    float: left;
-}
-.book_right_icon01{
-    height:40px;
-    width: 35px;
-    background: url("../img/hot_books/icon.png") no-repeat 2px 4px;
-    float: left;
-}
-.book_right_icon02{
-    height:40px;
-    width: 35px;
-    background: url("../img/hot_books/icon.png") no-repeat -35px 4px;
-    float: left;
-}
-.book_right_icon03{
-    height:40px;
-    width: 35px;
-    background: url("../img/hot_books/icon.png") no-repeat -72px 4px;
-    float: left;
-}
-.book_right_icon04{
-    height:40px;
-    width: 35px;
-    background: url("../img/hot_books/icon.png") no-repeat -110px 4px;
-    float: left;
-}
-.book_right_icon05{
-    height:40px;
-    width: 35px;
-    background: url("../img/hot_books/icon.png") no-repeat -148px 4px;
-    float: left;
-}
-.book_right_icon06{
-    height:40px;
-    width: 35px;
-    background: url("../img/hot_books/icon.png") no-repeat -185px 4px;
-    float: left;
-}
-.book_right_icon07{
-    height:40px;
-    width: 35px;
-    background: url("../img/hot_books/icon.png") no-repeat -204px -36px;
-    float: left;
-}
-.book_right_icon08{
-    height:40px;
-    width: 35px;
-    background: url("../img/hot_books/icon.png") no-repeat -167px -36px;
-    float: left;
-}
-.book_right_icon09{
-    height:40px;
-    width: 35px;
-    background: url("../img/hot_books/icon.png") no-repeat -130px -36px;
-    float: left;
-}
-.book_right_icon10{
-    height:40px;
-    width: 35px;
-    background: url("../img/hot_books/icon.png") no-repeat -93px -36px;
-    float: left;
-}
-.book_right_text {
-    height: 50px;
-    width: 70%;
-    float: left;
-    position: relative;
-}
-.book_right_text ul li{
-     height: 40px;
-     width: 130%;
-     margin-top: 28px;
-     margin-left: -20px;
-     box-shadow: 1px 2px 3px rgba(34, 25, 25, 0.5);
-     background-color: #f7f5f5;
-     border-radius: 10px;
-     -webkit-transition:all linear 0.30s;
-     -moz-transition:all linear 0.30s;
-     transition:all linear 0.30s;
- }
-.book_right_text ul li:hover{
-    height: 55px;
-    background-color: #cc4040;
+.book_right {
+	height: 730px;
+	width: 17%;
+	box-shadow: 1px 2px 3px rgba(34, 25, 25, 0.5);
+	float: left;
+	margin-left: 15%;
 }
 
-.book_right_name1{
-    text-align: left;
-    line-height: 35px;
-    height: 40px;
-    width: 200px;
-    position: absolute;
-    left: 20px;
-    float: right;
+.book_right_ {
+	height: 50px;
+	width: 12%;
+	overflow: hidden;
+	float: left;
 }
-.book_right_text a{
-    color: #ffc51f;
-    font: 20px/40px "Microsoft Yahei";
+
+.book_right_icon01 {
+	height: 40px;
+	width: 35px;
+	background: url("../img/hot_books/icon.png") no-repeat 2px 4px;
+	float: left;
+}
+
+.book_right_icon02 {
+	height: 40px;
+	width: 35px;
+	background: url("../img/hot_books/icon.png") no-repeat -35px 4px;
+	float: left;
+}
+
+.book_right_icon03 {
+	height: 40px;
+	width: 35px;
+	background: url("../img/hot_books/icon.png") no-repeat -72px 4px;
+	float: left;
+}
+
+.book_right_icon04 {
+	height: 40px;
+	width: 35px;
+	background: url("../img/hot_books/icon.png") no-repeat -110px 4px;
+	float: left;
+}
+
+.book_right_icon05 {
+	height: 40px;
+	width: 35px;
+	background: url("../img/hot_books/icon.png") no-repeat -148px 4px;
+	float: left;
+}
+
+.book_right_icon06 {
+	height: 40px;
+	width: 35px;
+	background: url("../img/hot_books/icon.png") no-repeat -185px 4px;
+	float: left;
+}
+
+.book_right_icon07 {
+	height: 40px;
+	width: 35px;
+	background: url("../img/hot_books/icon.png") no-repeat -204px -36px;
+	float: left;
+}
+
+.book_right_icon08 {
+	height: 40px;
+	width: 35px;
+	background: url("../img/hot_books/icon.png") no-repeat -167px -36px;
+	float: left;
+}
+
+.book_right_icon09 {
+	height: 40px;
+	width: 35px;
+	background: url("../img/hot_books/icon.png") no-repeat -130px -36px;
+	float: left;
+}
+
+.book_right_icon10 {
+	height: 40px;
+	width: 35px;
+	background: url("../img/hot_books/icon.png") no-repeat -93px -36px;
+	float: left;
+}
+
+.book_right_text {
+	height: 50px;
+	width: 70%;
+	float: left;
+	position: relative;
+}
+
+.book_right_text ul li {
+	height: 40px;
+	width: 130%;
+	margin-top: 28px;
+	margin-left: -20px;
+	box-shadow: 1px 2px 3px rgba(34, 25, 25, 0.5);
+	background-color: #f7f5f5;
+	border-radius: 10px;
+	-webkit-transition: all linear 0.30s;
+	-moz-transition: all linear 0.30s;
+	transition: all linear 0.30s;
+}
+
+.book_right_text ul li:hover {
+	height: 55px;
+	background-color: #cc4040;
+}
+
+.book_right_name1 {
+	text-align: left;
+	line-height: 35px;
+	height: 40px;
+	width: 200px;
+	position: absolute;
+	left: 20px;
+	float: right;
+}
+
+.book_right_text a {
+	color: #ffc51f;
+	font: 20px/40px "Microsoft Yahei";
 }
 /*新品上架*/
-.book_center_img{
-    height: 300px;
-    width: 40%;
+.book_center_img {
+	height: 300px;
+	width: 40%;
 }
-.book_center_new{
-    height: 750px;
-    width: 53%;
-    position: relative;
-    margin-left: 35%;
-    box-shadow: 1px 2px 3px rgba(34, 25, 25, 0.5);
+
+.book_center_new {
+	height: 750px;
+	width: 53%;
+	position: relative;
+	margin-left: 35%;
+	box-shadow: 1px 2px 3px rgba(34, 25, 25, 0.5);
 }
-.book_center_new_{
-    float: left;
+
+.book_center_new_ {
+	float: left;
 }
-.book_center_new_ ul{
-    list-style: none;
-    float: left;
+
+.book_center_new_ ul {
+	list-style: none;
+	float: left;
 }
-.book_center_new_ ul li{
-    float: left;
+
+.book_center_new_ ul li {
+	float: left;
 }
-.book_center_nav{
-    height: 43px;
-    width: 100%;
+
+.book_center_nav {
+	height: 43px;
+	width: 100%;
 }
-.book_center_new_img{
-    height: 180px;
-    width:120px;
-    margin-left: 42px;
-    margin-top: 10px;
-    text-align: center;
+
+.book_center_new_img {
+	height: 180px;
+	width: 120px;
+	margin-left: 42px;
+	margin-top: 10px;
+	text-align: center;
 }
-.book_center_new_img a{
-    color: red;
+
+.book_center_new_img a {
+	color: red;
 }
-.book_center_new_img img{
-   transition: all linear 0.30s;
+
+.book_center_new_img img {
+	transition: all linear 0.30s;
 }
-.book_center_new_img img:hover{
-   height:165px;
-   width:140px;
+
+.book_center_new_img img:hover {
+	height: 165px;
+	width: 140px;
 }
-.book_center_new_img a:hover{
-    color: blue;
+
+.book_center_new_img a:hover {
+	color: blue;
 }
 /*分页*/
-.new_page{
-    height: 120px;
-    width: 100%;
-    text-align: center;
-    margin-top: 55%;
+.new_page {
+	height: 120px;
+	width: 100%;
+	text-align: center;
+	margin-top: 55%;
 }
-.new_page ul{
-    text-align: center;
-    margin-left: 20%;
-    margin-top: 5%;
+
+.new_page ul {
+	text-align: center;
+	margin-left: 20%;
+	margin-top: 5%;
 }
 /*热门书籍推荐*/
-.book_hot{
-    width: 85%;
-    height: 300px;
-    box-shadow: 1px 1px 1px rgba(34, 25, 25, 0.5);
-    margin-top: 5%;
-    margin-left: 8%;
+.book_hot {
+	width: 85%;
+	height: 300px;
+	box-shadow: 1px 1px 1px rgba(34, 25, 25, 0.5);
+	margin-top: 5%;
+	margin-left: 8%;
 }
-.book_hot_icon{
-    height: 50px;
-    width: 100%;
 
+.book_hot_icon {
+	height: 50px;
+	width: 100%;
 }
-.book_hot_sug{
-    height:200px;
-    width: 45%;
-    box-shadow: 1px 2px 1px rgba(34, 25, 25, 0.4);
-    margin-left: 3.2%;
-    margin-top: 2%;
-    float: left;
+
+.book_hot_sug {
+	height: 200px;
+	width: 45%;
+	box-shadow: 1px 2px 1px rgba(34, 25, 25, 0.4);
+	margin-left: 3.2%;
+	margin-top: 2%;
+	float: left;
 }
-.book_sug_img{
-    height: 200px;
-    width: 150px;
-    float: left;
+
+.book_sug_img {
+	height: 200px;
+	width: 150px;
+	float: left;
 }
+
 .book_sug_text {
-    height: 200px;
-    width: 60%;
-    float: right;
-    margin-right: 10%;
+	height: 200px;
+	width: 60%;
+	float: right;
+	margin-right: 10%;
 }
-.book_hot_sug a{
-    color: #ff2832;
-    font-size: 20px;
+
+.book_hot_sug a {
+	color: #ff2832;
+	font-size: 20px;
 }
-.book_hot_sug p{
-    font: 15px/25px "Microsoft Yahei";
+
+.book_hot_sug p {
+	font: 15px/25px "Microsoft Yahei";
 }
