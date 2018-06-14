@@ -21,8 +21,8 @@ import book.service.PublishHouseService;
 @Namespace("/")
 @Controller("publishHouseAction") // 创建对象
 @Scope("prototype") // 多实例方式创建对象
-public class PublishHouseAction extends ActionSupport implements ModelDriven<PublishHouseAction> {
-	private PublishHouse publishHouse = new PublishHouse();
+public class PublishHouseAction extends ActionSupport implements ModelDriven<PublishHouse> {
+	PublishHouse publishHouse = new PublishHouse();
 
 	public PublishHouse getPublishHouse() {
 		return publishHouse;
@@ -34,13 +34,13 @@ public class PublishHouseAction extends ActionSupport implements ModelDriven<Pub
 
 	@Autowired
 	private PublishHouseService publishHouseService;
-	private List<PublishHouseAction> list = null;
+	private List<PublishHouse> list = null;
 
-	public List<PublishHouseAction> getList() {
+	public List<PublishHouse> getList() {
 		return list;
 	}
 
-	public void setList(List<PublishHouseAction> list) {
+	public void setList(List<PublishHouse> list) {
 		this.list = list;
 	}
 
@@ -117,9 +117,9 @@ public class PublishHouseAction extends ActionSupport implements ModelDriven<Pub
 	}
 
 	@Override
-	public PublishHouseAction getModel() {
+	public PublishHouse getModel() {
 		// TODO Auto-generated method stub
-		return null;
+		return publishHouse;
 	}
 
 }

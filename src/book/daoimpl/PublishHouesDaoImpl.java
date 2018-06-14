@@ -1,24 +1,19 @@
 package book.daoimpl;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
-import org.apache.struts2.ServletActionContext;
 import org.hibernate.criterion.DetachedCriteria;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
-import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
 
 import book.dao.PublishHouseDao;
 import book.entity.PublishHouse;
 
 @Repository("publishHouseDao")
-public class PublishHouesDaoImpl extends HibernateDaoSupport implements PublishHouseDao {
-	HttpServletRequest request = ServletActionContext.getRequest();
-	HttpSession session = request.getSession();
+public class PublishHouesDaoImpl implements PublishHouseDao {
+
 	@Autowired // 按类型注入
 	private HibernateTemplate hibernateTemplate;
 
@@ -38,9 +33,20 @@ public class PublishHouesDaoImpl extends HibernateDaoSupport implements PublishH
 	}
 
 	@Override
+	public int getPublishHouseCount(String publishHouseId) {
+		String sql = "select count(*) from tab_publishHouse where 1=1";
+		List list1 = new ArrayList<>();
+		if (publishHouseId != null && publishHouseId.length() > 0) {
+			sql += " and publishHouseId = '" + publishHouseId + "'";
+		}
+		List<Long> list = (List<Long>) hibernateTemplate.find(sql, list1.toArray());
+		return list.get(0).intValue();
+	}
+
+	@Override
 	public int getPublishHouseCount() {
-		String sql = "select count(*) from tab_pbulishHouse";
-		return ((Integer) getHibernateTemplate().iterate(sql).next()).intValue();
+
+		return 1;
 	}
 
 	@Override

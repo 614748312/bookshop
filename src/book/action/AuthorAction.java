@@ -22,7 +22,7 @@ import book.service.AuthorService;
 @Controller("authorAction") // 创建对象
 @Scope("prototype") // 多实例方式创建对象
 public class AuthorAction extends ActionSupport implements ModelDriven<Author> {
-	private Author author = new Author();
+	Author author = new Author();
 	private Integer authorId;
 
 	public Author getAuthor() {
@@ -128,7 +128,7 @@ public class AuthorAction extends ActionSupport implements ModelDriven<Author> {
 	@Override
 	public Author getModel() {
 		// TODO Auto-generated method stub
-		return null;
+		return author;
 	}
 
 }

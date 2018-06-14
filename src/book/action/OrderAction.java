@@ -17,43 +17,43 @@ import org.springframework.stereotype.Controller;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
-import book.entity.Orders;
+import book.entity.Order;
 import book.entity.PageBean;
-import book.service.OrdersService;
+import book.service.OrderService;
 
 @ParentPackage("struts-default")
 @Namespace("/")
 @Controller("ordersAction") // 创建对象
 @Scope("prototype") // 多实例方式创建对象
-public class OrdersAction extends ActionSupport implements ModelDriven<Orders> {
-	private Orders orders = new Orders();
+public class OrderAction extends ActionSupport implements ModelDriven<Order> {
+	Order order = new Order();
 	HttpServletRequest request = ServletActionContext.getRequest();
 	HttpSession session = request.getSession();
 	String userName = (String) session.getAttribute("userName");
 
-	public Orders getOrders() {
-		return orders;
+	public Order getOrder() {
+		return order;
 	}
 
-	public void setOrders(Orders orders) {
-		orders = orders;
+	public void setOrders(Order order) {
+		order = order;
 	}
 
 	@Autowired
-	private OrdersService ordersService;
-	private List<Orders> list = null;
+	private OrderService orderService;
+	private List<Order> list = null;
 
-	public List<Orders> getList() {
+	public List<Order> getList() {
 		return list;
 	}
 
-	public void setList(List<Orders> list) {
+	public void setList(List<Order> list) {
 		this.list = list;
 	}
 
 	private int currentPage = 1; // 当前页
 	private int pageSize = 2;// 默认每页显示条数
-	private PageBean<Orders> pb; // ${pb}
+	private PageBean<Order> pb; // ${pb}
 
 	public int getCurrentPage() {
 		return currentPage;
@@ -71,20 +71,20 @@ public class OrdersAction extends ActionSupport implements ModelDriven<Orders> {
 		this.pageSize = pageSize;
 	}
 
-	public PageBean<Orders> getPb() {
+	public PageBean<Order> getPb() {
 		return pb;
 	}
 
-	public void setPb(PageBean<Orders> pb) {
+	public void setPb(PageBean<Order> pb) {
 		this.pb = pb;
 	}
 
 	// 添加信息
-	@Action(value = "addOrders", results = {
+	@Action(value = "addOrder", results = {
 			@Result(name = "success", location = "/admin/findInfosByPage", type = "redirect") })
-	public String addOrders() {
+	public String addOrder() {
 		try {
-			ordersService.addOrders(orders);
+			orderService.addOrder(order);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -94,9 +94,9 @@ public class OrdersAction extends ActionSupport implements ModelDriven<Orders> {
 	// 删除信息
 	@Action(value = "delOrders", results = {
 			@Result(name = "success", location = "/admin/findInfosByPage", type = "redirect") })
-	public String delOrders() {
+	public String delOrder() {
 		try {
-			ordersService.delOrders(orders);
+			orderService.delOrder(order);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -104,21 +104,21 @@ public class OrdersAction extends ActionSupport implements ModelDriven<Orders> {
 	}
 
 	// 更新信息
-	@Action(value = "updateOrders", results = {
-			@Result(name = "updateOrders", location = "/admin/findInfosByPage", type = "redirect") })
+	@Action(value = "updateOrder", results = {
+			@Result(name = "updateOrder", location = "/admin/findInfosByPage", type = "redirect") })
 	public String updateOrders() {
 		try {
-			ordersService.updateOrders(orders);
+			orderService.updateOrder(order);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return "updateOrders";
+		return "updateOrder";
 	}
 
 	@Override
-	public Orders getModel() {
+	public Order getModel() {
 		// TODO Auto-generated method stub
-		return null;
+		return order;
 	}
 
 }

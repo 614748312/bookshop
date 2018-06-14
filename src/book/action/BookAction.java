@@ -1,5 +1,6 @@
 package book.action;
 
+import java.util.Date;
 import java.util.List;
 
 import org.apache.struts2.convention.annotation.Action;
@@ -22,7 +23,9 @@ import book.service.BookService;
 @Controller("bookAction") // 创建对象
 @Scope("prototype") // 多实例方式创建对象
 public class BookAction extends ActionSupport implements ModelDriven<Book> {
-	private Book book = new Book();
+	Book book = new Book();
+	private String condition;
+	private String keywords;
 
 	public Book getBook() {
 		return book;
@@ -30,12 +33,6 @@ public class BookAction extends ActionSupport implements ModelDriven<Book> {
 
 	public void setBook(Book book) {
 		this.book = book;
-	}
-
-	@Override
-	public Book getModel() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	@Autowired
@@ -78,10 +75,23 @@ public class BookAction extends ActionSupport implements ModelDriven<Book> {
 		this.pb = pb;
 	}
 
+	// 根据keywords查询对应condition数据
+	@Action(value = "findConditionByKeywords", results = {
+			@Result(name = "findConditionByKeywords", location = "/bookshop_admin/book_bmanage.jsp") })
+	public String findConditionsByKeywords() {
+
+		pb = bookService.findConditionByKeywords(currentPage, pageSize, condition, keywords);
+		this.setPb(pb);
+		return "findConditionByKeywords";
+	}
+
 	// 添加信息
 	@Action(value = "addBook", results = {
-			@Result(name = "success", location = "/admin/findInfosByPage", type = "redirect") })
+			@Result(name = "success", location = "findConditionByKeywords", type = "redirect") })
 	public String addBook() {
+		Date d = new Date();
+		book.setAddTime(d);
+		;
 		try {
 			bookService.addBook(book);
 		} catch (Exception e) {
@@ -92,13 +102,14 @@ public class BookAction extends ActionSupport implements ModelDriven<Book> {
 
 	// 删除信息
 	@Action(value = "delBook", results = {
-			@Result(name = "success", location = "/admin/findInfosByPage", type = "redirect") })
+			@Result(name = "success", location = "findConditionByKeywords", type = "redirect") })
 	public String delBook() {
 		try {
 			bookService.delBook(book);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		System.out.println("bookISBN");
 		return "success";
 	}
 
@@ -112,5 +123,11 @@ public class BookAction extends ActionSupport implements ModelDriven<Book> {
 			e.printStackTrace();
 		}
 		return "updateBook";
+	}
+
+	@Override
+	public Book getModel() {
+		// TODO Auto-generated method stub
+		return book;
 	}
 }

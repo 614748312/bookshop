@@ -12,12 +12,12 @@ import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@Table(name = "tab_orders")
+@Table(name = "tab_order")
 
-public class Orders {
+public class Order {
 	@Id
-	@GeneratedValue(generator = "ordersNumber")
-	@GenericGenerator(name = "ordersNumber", strategy = "native")
+	@GeneratedValue(generator = "orderNumber")
+	@GenericGenerator(name = "orderNumber", strategy = "native")
 	private Integer orderNumber;// 订单id
 	@ManyToOne
 	@JoinColumn(name = "bookISBN")
