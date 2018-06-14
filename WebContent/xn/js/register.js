@@ -1,8 +1,8 @@
 $(document)
 		.ready(
-				function() {
+				function () {
 					$("#ipuser").blur(function() {/* 用户名---焦点失去执行方法 */						
-						var rxuser = /^[A-Za-z0-9]{4,20}$/;
+						var rxuser = /^[a-zA-Z][A-Za-z0-9]{5,16}$/;
 						uname = $("#ipuser").val();				
 						var spanContent = document.getElementById("aa");
 						getxhr();
@@ -79,11 +79,13 @@ $(document)
 					$("#ippassword")
 							.change(
 									function() {/* 焦点失去执行方法 */
-
+										var paswContent =  document.getElementById("ee");
 										if (this.value != $("#ippasw").val()) {
-											document.getElementById("ee").innerText = "两次密码输入不一致 ";
+											paswContent.style.color="red";
+											paswContent.innerText = "两次密码输入不一致 ";
 										} else {
-											document.getElementById("ee").innerText = "输入正确";
+											paswContent.style.color="green";
+											paswContent.innerText = "输入正确";
 
 										}
 									});
@@ -103,10 +105,13 @@ $(document)
 											emailContent.style.color = "green";
 											emailContent.innerText = "输入正确";
 											email = $("#ipemail").val();
+											
 										}
 									});
-
-					// 异步验证
+					
+					
+	
+					// 异步验证							
 					// 创建XMLHttpRequest对象
 					var xmlhttp;
 					function getxhr() {
@@ -117,5 +122,16 @@ $(document)
 							// IE6, IE5 浏览器执行代码
 							xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 						}
-					}
-				});
+						}
+	
+			
+});
+function register(){
+	   if( $(".one").text()!="输入正确输入正确输入正确输入正确输入正确输入正确"){
+		  	alert($(".one").text());
+		return false; }
+		else {
+			alert("ok");
+			$(".form2").submit();
+		}
+	   }

@@ -5,20 +5,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>注册</title>
-
-
         <link rel="stylesheet" href="xn/css/register.css" />
 		<link rel="stylesheet" href="lq/css/bottom_style.css" />
 		<script type="text/javascript" src="lq/js/jquery.min.js" ></script>
 		<script type="text/javascript" src="xn/js/register.js" ></script>
 		<script type="text/javascript" src="lq/js/nav.js" ></script>
 </head>
-
 <body>
 			<div class="header">
 				<div class="regist_img"><img src="xn/img/icon_04.png" style="margin-left: 10px;" /></div>
 			</div>
-		<form class="form2" method="" action="" name="form1">
+		<form class="form2" action="register">
 			<div class="form_help">
 				<img src="xn/img/icon_03.png" style="margin-right: 1px;">
 				<a href="book_index.jsp" class="help_icon" >书城首页</a>
@@ -67,7 +64,7 @@
 			</div>
 
 			<div class="regist">
-				<input type="submit" class="btn" id="regist_btn" value="立即注册">
+				<input type="button"  class="btn" id="regist_btn" value="立即注册" onclick="register()" >
 				<a href="book_login.jsp">已有账号?去登录</a>
 			</div>
 		
@@ -75,5 +72,6 @@
 	 <div class="header">
    		  <div id="footer"></div>
      </div>
+
 	</body>
 </html>
