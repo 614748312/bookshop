@@ -34,13 +34,7 @@ import net.sf.json.JSONObject;
 public class UserAction extends ActionSupport implements ModelDriven<User>,
 ServletRequestAware,ServletResponseAware{
 	private static final long serialVersionUID = 1L;
-	private String userName;
-	public String getUserName() {
-		return userName;
-	}
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
+
 	User user=new User();
 	public User getUser() {
 		return user;
@@ -145,15 +139,33 @@ ServletRequestAware,ServletResponseAware{
 		}
 	  
 	}  
+	@Action(value="findByEmail")//判断用户名是否存在
+	public void findByEmail(){ 
+	   try{
+	    response.setContentType("text/html;charset=UTF-8");  
+	    String ajaxEmail=request.getParameter("Email");
+		User existUser =userService.findUserByEmail(ajaxEmail);    
+		PrintWriter pw = response.getWriter();
+	    if(existUser != null){    
+	    	JSONObject falsejson = new JSONObject();
+	    	falsejson.put("checkResult", false);
+			pw.write(falsejson.toString());//邮箱已被注册
+	    }else{  
+	    	JSONObject truejson = new JSONObject();
+	    	truejson.put("checkResult", true);
+			pw.write(truejson.toString());//邮箱可用
+	    }  
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
+	  
+	}  
 	
-	@Action(value="register",results={@Result(name="success",location="/book_login.jsp"),})
-	public String register(){
-	
+	@Action(value="register")
+	public void register(){
 			response.setContentType("text/html;charset=UTF-8");
-
 			userService.register(user);
 
-		return "success";
 	}
 	@Action(value="sendEmail")
 	public void sendEmail() throws javax.mail.MessagingException{
@@ -162,7 +174,7 @@ ServletRequestAware,ServletResponseAware{
 	     String password = "ryeplmoyfqtneabc";
 	        //创建邮箱发送器
 	     MailSender mailSender = new MailSender(username,password);
-	     String recipient = request.getParameter("Email");
+	     String recipient = request.getParameter("email");
 	     user=userService.findUserByEmail(recipient);
 	     String info="用户名:"+user.getUserName()+"密码:"+user.getPassword();
 	     System.out.println(info);
