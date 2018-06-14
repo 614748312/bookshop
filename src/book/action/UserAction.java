@@ -33,6 +33,13 @@ import net.sf.json.JSONObject;
 public class UserAction extends ActionSupport implements ModelDriven<User>,
 ServletRequestAware,ServletResponseAware{
 	private static final long serialVersionUID = 1L;
+	private String userName;
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 	User user=new User();
 	public User getUser() {
 		return user;
@@ -141,6 +148,7 @@ ServletRequestAware,ServletResponseAware{
 			})
 	public String register(){
 		response.setContentType("text/html;charset=UTF-8");
+		System.out.println(user.toString());
 		userService.register(user);
 		return "success";
 	}

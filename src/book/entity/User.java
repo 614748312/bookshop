@@ -3,13 +3,19 @@ package book.entity;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.GeneratorType;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name = "tab_user")
 public class User {
 	@Id
+	@GenericGenerator(name = "userName",strategy = "assigned")
+	@GeneratedValue(generator = "userName")
 	private String userName;
 	private String password;
 	private String email;
@@ -72,6 +78,12 @@ public class User {
 
 	public void setBirthday(Date birthday) {
 		this.birthday = birthday;
+	}
+
+	@Override
+	public String toString() {
+		return "User [userName=" + userName + ", password=" + password + ", email=" + email + ", phoneNumber="
+				+ phoneNumber + ", sex=" + sex + ", nickName=" + nickName + ", birthday=" + birthday + "]";
 	}
 
 }

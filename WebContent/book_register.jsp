@@ -18,25 +18,25 @@
 			<div class="header">
 				<div class="regist_img"><img src="xn/img/icon_04.png" style="margin-left: 10px;" /></div>
 			</div>
-		<form class="form2" method="" action="" name="form1">
+		<form class="form2" method="post" action="register" name="form1" onsubmit="check()">
 			<div class="form_help">
 				<img src="xn/img/icon_03.png" style="margin-right: 1px;">
 				<a href="book_index.jsp" class="help_icon" >书城首页</a>
 			</div>
 			<div>
 				<span class="tip">用户名：</span>
-				<input type="text" id="ipuser" name="" value="" class="uersname" placeholder="请输入用户名 6到15数字，字母组合 以字母开头 ">
+				<input type="text" id="ipuser" name="userName" value="" class="uersname" placeholder="请输入用户名 6到15数字，字母组合 以字母开头 ">
 				<span class="one"  id="aa"></span>
 			</div>
 
 			<div><span class="tip">昵称：</span>
-				<input id="ipnc"type="text" name="" value="" placeholder="请输入昵称" class="nicheng">
+				<input id="ipnc"type="text" name="nickName" value="" placeholder="请输入昵称" class="nicheng">
 			    <span class="one" id="bb" ></span>
 
 			</div>
 			
             <div><span class="tip">手机号码：</span>
-				<input id="ipphone" type="text" name="" value="" placeholder="请输入11位手机号" class="phone ">
+				<input id="ipphone" type="text" name="phoneNumber" value="" placeholder="请输入11位手机号" class="phone ">
 				<span class="one" id="cc" ></span>
 
 			</div>
@@ -49,7 +49,7 @@
 			
 
 			<div><span class="tip">密码：</span>
-				<input id="ippasw" type="password" name="" value="" placeholder="请输入6-15个数字" class="pasw required">
+				<input id="ippasw" type="password" name="password" value="" placeholder="请输入6-15个数字" class="pasw required">
 		    	<span class="one" id="dd" ></span>
 
 			</div>
@@ -61,7 +61,7 @@
 			</div>
 
 			<div><span class="tip">邮箱：</span>
-				<input id="ipemail" type="text" name="" value="" class="eal required" placeholder="请输入邮箱,邮箱格式,123@163.com">
+				<input id="ipemail" type="text" name="email" value="" class="eal required" placeholder="请输入邮箱,邮箱格式,123@163.com">
 				<span class="one" id="ff" ></span>
 
 			</div>
@@ -75,5 +75,10 @@
 	 <div class="header">
    		  <div id="footer"></div>
      </div>
+     <script type="text/javascript">
+     function check(){
+    	 return false;
+     } 
+     </script>
 	</body>
 </html>
