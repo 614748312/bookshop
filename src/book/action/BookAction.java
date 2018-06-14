@@ -2,10 +2,6 @@ package book.action;
 
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
-import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.ParentPackage;
@@ -17,43 +13,46 @@ import org.springframework.stereotype.Controller;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
-import book.entity.Orders;
+import book.entity.Book;
 import book.entity.PageBean;
-import book.service.OrdersService;
+import book.service.BookService;
 
 @ParentPackage("struts-default")
 @Namespace("/")
-@Controller("ordersAction") // 创建对象
+@Controller("bookAction") // 创建对象
 @Scope("prototype") // 多实例方式创建对象
-public class OrdersAction extends ActionSupport implements ModelDriven<Orders> {
-	private Orders orders = new Orders();
-	HttpServletRequest request = ServletActionContext.getRequest();
-	HttpSession session = request.getSession();
-	String userName = (String) session.getAttribute("userName");
+public class BookAction extends ActionSupport implements ModelDriven<Book> {
+	private Book book = new Book();
 
-	public Orders getOrders() {
-		return orders;
+	public Book getBook() {
+		return book;
 	}
 
-	public void setOrders(Orders orders) {
-		orders = orders;
+	public void setBook(Book book) {
+		this.book = book;
+	}
+
+	@Override
+	public Book getModel() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Autowired
-	private OrdersService ordersService;
-	private List<Orders> list = null;
+	private BookService bookService;
+	private List<Book> list = null;
 
-	public List<Orders> getList() {
+	public List<Book> getList() {
 		return list;
 	}
 
-	public void setList(List<Orders> list) {
+	public void setList(List<Book> list) {
 		this.list = list;
 	}
 
 	private int currentPage = 1; // 当前页
 	private int pageSize = 2;// 默认每页显示条数
-	private PageBean<Orders> pb; // ${pb}
+	private PageBean<Book> pb; // ${pb}
 
 	public int getCurrentPage() {
 		return currentPage;
@@ -71,20 +70,20 @@ public class OrdersAction extends ActionSupport implements ModelDriven<Orders> {
 		this.pageSize = pageSize;
 	}
 
-	public PageBean<Orders> getPb() {
+	public PageBean<Book> getPb() {
 		return pb;
 	}
 
-	public void setPb(PageBean<Orders> pb) {
+	public void setPb(PageBean<Book> pb) {
 		this.pb = pb;
 	}
 
 	// 添加信息
-	@Action(value = "addOrders", results = {
+	@Action(value = "addBook", results = {
 			@Result(name = "success", location = "/admin/findInfosByPage", type = "redirect") })
-	public String addOrders() {
+	public String addBook() {
 		try {
-			ordersService.addOrders(orders);
+			bookService.addBook(book);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -92,11 +91,11 @@ public class OrdersAction extends ActionSupport implements ModelDriven<Orders> {
 	}
 
 	// 删除信息
-	@Action(value = "delOrders", results = {
+	@Action(value = "delBook", results = {
 			@Result(name = "success", location = "/admin/findInfosByPage", type = "redirect") })
-	public String delOrders() {
+	public String delBook() {
 		try {
-			ordersService.delOrders(orders);
+			bookService.delBook(book);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -104,21 +103,14 @@ public class OrdersAction extends ActionSupport implements ModelDriven<Orders> {
 	}
 
 	// 更新信息
-	@Action(value = "updateOrders", results = {
-			@Result(name = "updateOrders", location = "/admin/findInfosByPage", type = "redirect") })
-	public String updateOrders() {
+	@Action(value = "updateBook", results = {
+			@Result(name = "updateBook", location = "/admin/findInfosByPage", type = "redirect") })
+	public String updateBook() {
 		try {
-			ordersService.updateOrders(orders);
+			bookService.updateBook(book);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return "updateOrders";
+		return "updateBook";
 	}
-
-	@Override
-	public Orders getModel() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }
