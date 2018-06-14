@@ -1,3 +1,4 @@
+
 function createXMLhttp() {  
     var xmlhttp;  
     if (window.XMLHttpRequest)  

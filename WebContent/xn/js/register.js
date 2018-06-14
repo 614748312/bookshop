@@ -1,3 +1,4 @@
+
 $(document)
 		.ready(
 				function () {
@@ -168,3 +169,4 @@ function submit(){
 	location.href="book_login.jsp";
 	
 }
+
