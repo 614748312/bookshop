@@ -6,9 +6,7 @@
 <meta charset="UTF-8">
 <title>书籍分类查询</title>
 <link rel="stylesheet" type="text/css" href="lq/css/book_cort.css" />
-<link rel="stylesheet" type="text/css"
-	href="lq/font-awesome-4.7.0/css/font-awesome.min.css" />
-<link rel="stylesheet" type="text/css" href="lq/css/zdialog.css" />
+<link rel="stylesheet" type="text/css"href="lq/font-awesome-4.7.0/css/font-awesome.min.css" />
 </head>
 <body>
 	<div class="tools"></div>
@@ -116,7 +114,6 @@
 	<div id="footer"></div>
 	<script type="text/javascript" src="lq/js/jquery.min.js"></script>
 	<script type="text/javascript" src="lq/js/nav.js"></script>
-	<script type="text/javascript" src="lq/js/zdialog.js"></script>
 	<script type="text/javascript" src="lq/js/book_tools.js"></script>
 </body>
 </html>

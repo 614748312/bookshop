@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import javax.mail.internet.AddressException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.ParentPackage;
@@ -109,6 +110,8 @@ ServletRequestAware,ServletResponseAware{
 				JSONObject truejson = new JSONObject();
 				truejson.put("checkResult", true);
 				pw.write(truejson.toString());
+				HttpSession session = request.getSession();
+				session.setAttribute("nicheng",userNameAjax);
 			} else if (password != null && password.equals(passwordAjax) == false) {
 				JSONObject falsejson = new JSONObject();
 				falsejson.put("checkResult", false);
@@ -143,12 +146,10 @@ ServletRequestAware,ServletResponseAware{
 	  
 	}  
 	
-	@Action(value="register",results={
-			@Result(name="success",location="/success.jsp"),
-			})
+	@Action(value="register",results={@Result(name="success",location="/book_login.jsp"),})
 	public String register(){
 		response.setContentType("text/html;charset=UTF-8");
-		System.out.println(user.toString());
+		
 		userService.register(user);
 		return "success";
 	}

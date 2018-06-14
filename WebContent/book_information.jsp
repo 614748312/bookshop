@@ -6,10 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>书籍详情</title>
 <link rel="stylesheet" type="text/css" href="lq/css/newbooks_style.css" />
-<link rel="stylesheet" type="text/css"
-	href="lq/css/book_information.css" />
-<link rel="stylesheet" type="text/css"
-	href="lq/font-awesome-4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css"href="lq/css/book_information.css" />
+<link rel="stylesheet" type="text/css"href="lq/font-awesome-4.7.0/css/font-awesome.min.css" />
 </head>
 <body>
 	<div class="tools"></div>

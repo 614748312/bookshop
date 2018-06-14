@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -14,6 +15,7 @@
 	<div class="tools">
 		<div class="head" name="顶部链接">
 			<ul class="head_nav">
+			 <s:if test="#session.nicheng!=null">
 				<li class="my_bookshop"><a class="menu_btn" href="#"
 					name="我的书籍屋" id="a_channel"
 					onmouseover="showgaoji('a_channel','nav_mybookshop')"
@@ -25,15 +27,20 @@
 						<li><a href="#">购物车</a></li>
 						<li><a href="#">我的信息</a></li>
 						<li><a href="#">账号安全</a></li>
+						<li><a href="#">注销</a></li>
 					</ul>
+					</li>					
 			</ul>
-			<div class="new_head_znx" id="znx_content" style="display: none;"></div>
 			<div class="head_welcome">
-				<span id="nickname"> 欢迎光临奈布书城，请 <a href="book_login.jsp"
-					name="登录" class="login_link">登录</a> <a href="book_register.jsp"
-					name="注册" class="register_link">成为会员</a>
-				</span>
+					<span id="nickname"> 欢迎<font color="red">${session.nicheng}</font>进入奈布书城</span>				
 			</div>
+			</s:if>
+			<s:else>
+			<span id="nickname"> 欢迎光临奈布书城请 ,<a href="book_login.jsp"
+					name="登录" class="login_link">登录</a><a href="book_register.jsp"
+					name="注册" class="register_link">成为会员</a>
+			</span>
+			</s:else>
 		</div>
 	</div>
 	<script type="text/javascript" src="lq/js/jquery.min.js"></script>
