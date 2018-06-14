@@ -10,5 +10,7 @@ public interface UserDao {
 
 	String check(String userNameAjax);
 
+	User findUserByEmail(String recipient);
+
 	
 }

@@ -27,5 +27,11 @@ public class UserDaoImpl implements UserDao{
 		List<User> list=(List<User>)hibernateTemplate.find("from User where userName=?", userNameAjax);
 		return list.isEmpty()?null:list.get(0).getPassword();
 	}
+	@Override
+	public User findUserByEmail(String recipient) {
+		// TODO Auto-generated method stub
+		List<User> list = (List<User>) hibernateTemplate.find("from User where email=?", recipient);
+		return list.isEmpty()?null:list.get(0);
+	}
 	
 }

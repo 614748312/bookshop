@@ -106,7 +106,6 @@ public class Book {
 		this.author = author;
 	}
 
-
 	public PublishHouse getPublishHouse() {
 		return publishHouse;
 	}

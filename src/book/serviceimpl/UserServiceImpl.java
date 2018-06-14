@@ -29,4 +29,10 @@ public class UserServiceImpl implements UserService{
 		return userDao.check(userNameAjax);
 	}
 
+	@Override
+	public User findUserByEmail(String recipient) {
+		// TODO Auto-generated method stub
+		return userDao.findUserByEmail(recipient);
+	}
+
 }

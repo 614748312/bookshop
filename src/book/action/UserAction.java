@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.annotation.Resource;
+import javax.mail.internet.AddressException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -19,6 +20,8 @@ import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
+import book.email.Mail;
+import book.email.util.MailSender;
 import book.entity.User;
 import book.service.UserService;
 import cn.dsna.util.images.ValidateCode;
@@ -26,11 +29,18 @@ import net.sf.json.JSONObject;
 
 @ParentPackage("struts-default")
 @Namespace("/")
-@Controller("userAction")   
+@Controller("userAction")
 @Scope("prototype")
 public class UserAction extends ActionSupport implements ModelDriven<User>,
 ServletRequestAware,ServletResponseAware{
 	private static final long serialVersionUID = 1L;
+	private String userName;
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 	User user=new User();
 	public User getUser() {
 		return user;
@@ -138,15 +148,34 @@ ServletRequestAware,ServletResponseAware{
 	
 	@Action(value="register",results={@Result(name="success",location="/book_login.jsp"),})
 	public String register(){
-
 	
 			response.setContentType("text/html;charset=UTF-8");
 
 			userService.register(user);
-		 
-	
+
 		return "success";
 	}
+	@Action(value="sendEmail")
+	public void sendEmail() throws javax.mail.MessagingException{
+		 String username = "2287843583@qq.com"; 
+	        //发件人邮箱登录密码：这里填写要发送出去的邮箱的登录密码即可
+	     String password = "ryeplmoyfqtneabc";
+	        //创建邮箱发送器
+	     MailSender mailSender = new MailSender(username,password);
+	     String recipient = request.getParameter("Email");
+	     user=userService.findUserByEmail(recipient);
+	     String info="用户名:"+user.getUserName()+"密码:"+user.getPassword();
+	     System.out.println(info);
+	     Mail mail = new Mail("找回密码",info);
+	     try {
+	            mailSender.send(recipient, mail);
+	        } catch (AddressException e) {
+	            System.out.println("发信人邮箱路径不正确........");
+	            e.printStackTrace();
+	        }
+	        System.out.println("发送成功........");
+	    }
+	
 	@Override
 	public void setServletResponse(HttpServletResponse response) {
 		this.response=response;
@@ -159,5 +188,4 @@ ServletRequestAware,ServletResponseAware{
 	public User getModel() {
 		return user;
 	}
-
 }
