@@ -14,6 +14,7 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
 import book.entity.Manager;
+import book.service.ManagerService;
 
 @ParentPackage("struts-default")
 @Namespace("/")
