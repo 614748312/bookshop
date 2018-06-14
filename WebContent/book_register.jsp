@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -7,15 +8,17 @@
 <title>注册</title>
         <link rel="stylesheet" href="xn/css/register.css" />
 		<link rel="stylesheet" href="lq/css/bottom_style.css" />
+		<link rel="stylesheet" href="lq/css/toastr.css" />
 		<script type="text/javascript" src="lq/js/jquery.min.js" ></script>
 		<script type="text/javascript" src="xn/js/register.js" ></script>
 		<script type="text/javascript" src="lq/js/nav.js" ></script>
+		<script type="text/javascript" src="lq/js/toastr.js" ></script>
 </head>
 <body>
 			<div class="header">
 				<div class="regist_img"><img src="xn/img/icon_04.png" style="margin-left: 10px;" /></div>
 			</div>
-		<form class="form2" action="register">
+		<form class="form2" action="register" method="post">
 
 			<div class="form_help">
 				<img src="xn/img/icon_03.png" style="margin-right: 1px;">
@@ -49,7 +52,6 @@
 			<div><span class="tip">密码：</span>
 				<input id="ippasw" type="password" name="password" value="" placeholder="请输入6-15个数字" class="pasw required">
 		    	<span class="one" id="dd" ></span>
-
 			</div>
 
 			<div><span class="tip">确认密码：</span>
@@ -57,7 +59,6 @@
 				<span class="one" id="ee" ></span>
 
 			</div>
-
 			<div><span class="tip">邮箱：</span>
 				<input id="ipemail" type="text" name="email" value="" class="eal required" placeholder="请输入邮箱,邮箱格式,123@163.com">
 				<span class="one" id="ff" ></span>

@@ -1,3 +1,4 @@
+
 function createXMLhttp() {  
     var xmlhttp;  
     if (window.XMLHttpRequest)  
@@ -60,3 +61,46 @@ function login1(){
 	
 	var t=setTimeout(function(){$("#bbb1,#bbb2,#bbb3").empty();}, 3000);
 }	
+
+
+
+function forget(){
+	    var rxemail = /^\w+@[a-zA-Z0-9]{2,10}(?:\.[a-z]{2,4}){1,3}$/;
+	    var email = $(".email").val();
+	    var xmlhttp = createXMLhttp();
+		var sendData = "Email=" + email+ "&t=" + Math.random();
+		var url = "findByEmail?" + sendData;
+		xmlhttp.open("GET", url, true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange = function() {
+			if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+			{
+				var registerdata = JSON.parse(xmlhttp.responseText);
+				if (email.length == 0 ||email==null) {
+					toastr.warning("邮箱不能为空");
+					return false;
+			  }	
+				else if( !rxemail.test(email)){
+				    toastr.warning("邮箱格式有误");
+					return false;
+			  }
+			 else if(registerdata.checkResult !=false)
+				{
+					toastr.warning("该邮箱未绑定账号");
+					return false;
+				}
+			  
+			  
+			  else  {
+				  $(".forget").submit();
+				  toastr.success("邮件发送成功，请注意查收");
+				  setTimeout (function(){
+					  location.href="book_login.jsp";
+				  },1500);
+			  }
+			}
+		}
+	
+	
+}
+

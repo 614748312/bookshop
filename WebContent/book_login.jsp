@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -8,10 +9,12 @@
 <link rel="stylesheet" href="xn/css/login.css" />
 <link rel="stylesheet" href="lq/css/bottom_style.css" />
 <link rel="stylesheet" href="xn/css/modal.min.css">
+<link rel="stylesheet" href="lq/css/toastr.css" />
 <script type="text/javascript" src="lq/js/jquery.min.js"></script>
 <script type="text/javascript" src="xn/js/login.js"></script>
 <script type="text/javascript" src="xn/js/modal.min.js"></script>
 <script type="text/javascript" src="lq/js/nav.js"></script>
+<script type="text/javascript" src="lq/js/toastr.js" ></script>
 </head>
 <body>
 		<!--顶部图片信息-->
@@ -47,7 +50,7 @@
 					</div>
 					<div class="login_wj fr">
 						<button type="button" class="btn" id="forget">
-                                                  忘记密码
+                                                 		 忘记密码
                         </button>
 				
 
@@ -55,22 +58,27 @@
 						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 							<div class="modal-dialog" role="document">
 								<div class="modal-content">
+								<form action="sendEmail" method="get" class="forget">
 									<div class="modal-header">
-										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span></button>
 										<h4 class="modal-title" id="myModalLabel">找回密码</h4>
 									</div>
 									<div class="modal-body">
 										<p>电子邮件地址：
-										<input type="email"  name="email" value=""  required/>
+										<input type="email"  name="email" value="" class="email" required/>
 										</p>
 									</div>
 									<div class="modal-foter">
 										<button type="button" class="btn" data-dismiss="modal">关闭</button>
-										<button type="button" class="btn">确认</button>
+										<button type="button" class="btn" onclick="forget()">确认</button>
 									</div>
+								
 									<div class="modal-fot ">
 										请在输入邮箱账号后点确认按钮，查看电子邮件并修改密码
 									</div>
+								
+								</form>
 								</div>
 							</div>
 						</div>
@@ -119,6 +127,4 @@
 		</div><!--底部信息显示结束-->
 
 	</body>
-
-
 </html>

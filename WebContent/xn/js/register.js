@@ -1,3 +1,4 @@
+
 $(document)
 		.ready(
 				function () {
@@ -31,6 +32,7 @@ $(document)
 							}
 						}
 					});
+					
 					$("#ipnc").blur(function() {/* 昵称---焦点失去执行方法 */
 					
 						var nc = $("#ipnc").val();
@@ -95,8 +97,7 @@ $(document)
 									function() {/* 焦点失去执行方法 */
 										var rxemail = /^\w+@[a-zA-Z0-9]{2,10}(?:\.[a-z]{2,4}){1,3}$/;
 										var email = $("#ipemail").val();
-										var emailContent = document
-												.getElementById("ff");
+										var emailContent = document.getElementById("ff");
 										if (email.length == 0
 												|| !rxemail.test(email)) {
 											emailContent.style.color = "red";
@@ -104,10 +105,33 @@ $(document)
 										} else {
 											emailContent.style.color = "green";
 											emailContent.innerText = "输入正确";
-											email = $("#ipemail").val();
+										
 											
 										}
-									});
+										getxhr();
+										var sendData = "Email=" + email+ "&t=" + Math.random();
+										var url = "findByEmail?" + sendData;
+										xmlhttp.open("GET", url, true);
+										xmlhttp.send();
+										xmlhttp.onreadystatechange = function() {
+											if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+											{
+												var registerdata = JSON.parse(xmlhttp.responseText);
+												if(registerdata.checkResult == false)
+												{
+													emailContent.style.color = "red";
+													emailContent.innerText = "邮箱已被注册";
+												}
+												else if(egisterdata.checkResult == false&&rxemail.test(email))
+												{
+													emailContent.style.color = "red";
+													emailContent.innerText = "输入正确";
+										    	}
+											
+										
+										  }
+										}
+										});								
 					
 					
 	
@@ -126,12 +150,23 @@ $(document)
 	
 			
 });
+					
 function register(){
 	   if( $(".one").text()!="输入正确输入正确输入正确输入正确输入正确输入正确"){
-		  	alert($(".one").text());
-		return false; }
+		
+		   return false; 
+		
+	   }
 		else {
-			alert("ok");
-			$(".form2").submit();
+			toastr.success("注册成功！跳转登录");
+			setTimeout('submit()',2000); 
 		}
 	   }
+
+
+function submit(){
+	$(".form2").submit();
+	location.href="book_login.jsp";
+	
+}
+
